@@ -29,29 +29,44 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reception));
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.reportBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.viewBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dummyBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.checkBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.regBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dispNameLb = new System.Windows.Forms.Label();
-            this.logo = new System.Windows.Forms.PictureBox();
-            this.minimizeWindow = new Bunifu.Framework.UI.BunifuImageButton();
-            this.closeWindow = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.logoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.headerPannel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.logo2 = new System.Windows.Forms.PictureBox();
+            this.regBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.dispNameLb = new System.Windows.Forms.Label();
             this.line = new Bunifu.Framework.UI.BunifuSeparator();
+            this.dummyBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.closeWindow = new Bunifu.Framework.UI.BunifuImageButton();
+            this.checkBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.minimizeWindow = new Bunifu.Framework.UI.BunifuImageButton();
+            this.logoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.patientNameListGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.logout = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.headerPannel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizeWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeWindow)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patientNameListGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -59,215 +74,77 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // panel1
+            // bunifuDragControl1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.line);
-            this.panel1.Controls.Add(this.reportBtn);
-            this.panel1.Controls.Add(this.viewBtn);
-            this.panel1.Controls.Add(this.dummyBtn);
-            this.panel1.Controls.Add(this.checkBtn);
-            this.panel1.Controls.Add(this.regBtn);
-            this.panel1.Controls.Add(this.dispNameLb);
-            this.panel1.Controls.Add(this.logo);
-            this.panel1.Controls.Add(this.minimizeWindow);
-            this.panel1.Controls.Add(this.closeWindow);
-            this.logoAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 107);
-            this.panel1.TabIndex = 0;
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.headerPannel;
+            this.bunifuDragControl1.Vertical = true;
             // 
-            // reportBtn
+            // headerPannel
             // 
-            this.reportBtn.Activecolor = System.Drawing.Color.Transparent;
-            this.reportBtn.BackColor = System.Drawing.Color.Transparent;
-            this.reportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.reportBtn.BorderRadius = 5;
-            this.reportBtn.ButtonText = "Report";
-            this.reportBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoAnimator.SetDecoration(this.reportBtn, BunifuAnimatorNS.DecorationType.None);
-            this.reportBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.reportBtn.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportBtn.ForeColor = System.Drawing.Color.Gray;
-            this.reportBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.reportBtn.Iconimage = null;
-            this.reportBtn.Iconimage_right = null;
-            this.reportBtn.Iconimage_right_Selected = null;
-            this.reportBtn.Iconimage_Selected = null;
-            this.reportBtn.IconMarginLeft = 0;
-            this.reportBtn.IconMarginRight = 0;
-            this.reportBtn.IconRightVisible = true;
-            this.reportBtn.IconRightZoom = 0D;
-            this.reportBtn.IconVisible = true;
-            this.reportBtn.IconZoom = 90D;
-            this.reportBtn.IsTab = false;
-            this.reportBtn.Location = new System.Drawing.Point(539, 67);
-            this.reportBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.reportBtn.Name = "reportBtn";
-            this.reportBtn.Normalcolor = System.Drawing.Color.Transparent;
-            this.reportBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
-            this.reportBtn.OnHoverTextColor = System.Drawing.Color.Silver;
-            this.reportBtn.selected = false;
-            this.reportBtn.Size = new System.Drawing.Size(62, 27);
-            this.reportBtn.TabIndex = 7;
-            this.reportBtn.Text = "Report";
-            this.reportBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.reportBtn.Textcolor = System.Drawing.Color.DarkGray;
-            this.reportBtn.TextFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerPannel.BackColor = System.Drawing.Color.Transparent;
+            this.headerPannel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("headerPannel.BackgroundImage")));
+            this.headerPannel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.headerPannel.Controls.Add(this.logout);
+            this.headerPannel.Controls.Add(this.logo2);
+            this.headerPannel.Controls.Add(this.regBtn);
+            this.headerPannel.Controls.Add(this.dispNameLb);
+            this.headerPannel.Controls.Add(this.line);
+            this.headerPannel.Controls.Add(this.dummyBtn);
+            this.headerPannel.Controls.Add(this.logo);
+            this.headerPannel.Controls.Add(this.closeWindow);
+            this.headerPannel.Controls.Add(this.checkBtn);
+            this.headerPannel.Controls.Add(this.minimizeWindow);
+            this.logoAnimator.SetDecoration(this.headerPannel, BunifuAnimatorNS.DecorationType.None);
+            this.headerPannel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPannel.GradientBottomLeft = System.Drawing.Color.LimeGreen;
+            this.headerPannel.GradientBottomRight = System.Drawing.Color.MediumSeaGreen;
+            this.headerPannel.GradientTopLeft = System.Drawing.Color.Navy;
+            this.headerPannel.GradientTopRight = System.Drawing.Color.Black;
+            this.headerPannel.Location = new System.Drawing.Point(0, 0);
+            this.headerPannel.Name = "headerPannel";
+            this.headerPannel.Quality = 10;
+            this.headerPannel.Size = new System.Drawing.Size(1370, 169);
+            this.headerPannel.TabIndex = 7;
             // 
-            // viewBtn
+            // logo2
             // 
-            this.viewBtn.Activecolor = System.Drawing.Color.Transparent;
-            this.viewBtn.BackColor = System.Drawing.Color.Transparent;
-            this.viewBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.viewBtn.BorderRadius = 5;
-            this.viewBtn.ButtonText = "View";
-            this.viewBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoAnimator.SetDecoration(this.viewBtn, BunifuAnimatorNS.DecorationType.None);
-            this.viewBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.viewBtn.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewBtn.ForeColor = System.Drawing.Color.Gray;
-            this.viewBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.viewBtn.Iconimage = null;
-            this.viewBtn.Iconimage_right = null;
-            this.viewBtn.Iconimage_right_Selected = null;
-            this.viewBtn.Iconimage_Selected = null;
-            this.viewBtn.IconMarginLeft = 0;
-            this.viewBtn.IconMarginRight = 0;
-            this.viewBtn.IconRightVisible = true;
-            this.viewBtn.IconRightZoom = 0D;
-            this.viewBtn.IconVisible = true;
-            this.viewBtn.IconZoom = 90D;
-            this.viewBtn.IsTab = false;
-            this.viewBtn.Location = new System.Drawing.Point(389, 67);
-            this.viewBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.viewBtn.Name = "viewBtn";
-            this.viewBtn.Normalcolor = System.Drawing.Color.Transparent;
-            this.viewBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
-            this.viewBtn.OnHoverTextColor = System.Drawing.Color.Silver;
-            this.viewBtn.selected = false;
-            this.viewBtn.Size = new System.Drawing.Size(45, 27);
-            this.viewBtn.TabIndex = 6;
-            this.viewBtn.Text = "View";
-            this.viewBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.viewBtn.Textcolor = System.Drawing.Color.DarkGray;
-            this.viewBtn.TextFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // dummyBtn
-            // 
-            this.dummyBtn.Activecolor = System.Drawing.Color.Transparent;
-            this.dummyBtn.BackColor = System.Drawing.Color.Transparent;
-            this.dummyBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dummyBtn.BorderRadius = 5;
-            this.dummyBtn.ButtonText = "Dummy Ticket";
-            this.dummyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoAnimator.SetDecoration(this.dummyBtn, BunifuAnimatorNS.DecorationType.None);
-            this.dummyBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.dummyBtn.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dummyBtn.ForeColor = System.Drawing.Color.Gray;
-            this.dummyBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.dummyBtn.Iconimage = null;
-            this.dummyBtn.Iconimage_right = null;
-            this.dummyBtn.Iconimage_right_Selected = null;
-            this.dummyBtn.Iconimage_Selected = null;
-            this.dummyBtn.IconMarginLeft = 0;
-            this.dummyBtn.IconMarginRight = 0;
-            this.dummyBtn.IconRightVisible = true;
-            this.dummyBtn.IconRightZoom = 0D;
-            this.dummyBtn.IconVisible = true;
-            this.dummyBtn.IconZoom = 90D;
-            this.dummyBtn.IsTab = false;
-            this.dummyBtn.Location = new System.Drawing.Point(434, 67);
-            this.dummyBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.dummyBtn.Name = "dummyBtn";
-            this.dummyBtn.Normalcolor = System.Drawing.Color.Transparent;
-            this.dummyBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
-            this.dummyBtn.OnHoverTextColor = System.Drawing.Color.Silver;
-            this.dummyBtn.selected = false;
-            this.dummyBtn.Size = new System.Drawing.Size(105, 27);
-            this.dummyBtn.TabIndex = 5;
-            this.dummyBtn.Text = "Dummy Ticket";
-            this.dummyBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.dummyBtn.Textcolor = System.Drawing.Color.DarkGray;
-            this.dummyBtn.TextFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // checkBtn
-            // 
-            this.checkBtn.Activecolor = System.Drawing.Color.Transparent;
-            this.checkBtn.BackColor = System.Drawing.Color.Transparent;
-            this.checkBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBtn.BorderRadius = 5;
-            this.checkBtn.ButtonText = "Check in";
-            this.checkBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoAnimator.SetDecoration(this.checkBtn, BunifuAnimatorNS.DecorationType.None);
-            this.checkBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.checkBtn.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBtn.ForeColor = System.Drawing.Color.Gray;
-            this.checkBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.checkBtn.Iconimage = null;
-            this.checkBtn.Iconimage_right = null;
-            this.checkBtn.Iconimage_right_Selected = null;
-            this.checkBtn.Iconimage_Selected = null;
-            this.checkBtn.IconMarginLeft = 0;
-            this.checkBtn.IconMarginRight = 0;
-            this.checkBtn.IconRightVisible = true;
-            this.checkBtn.IconRightZoom = 0D;
-            this.checkBtn.IconVisible = true;
-            this.checkBtn.IconZoom = 90D;
-            this.checkBtn.IsTab = false;
-            this.checkBtn.Location = new System.Drawing.Point(318, 67);
-            this.checkBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBtn.Name = "checkBtn";
-            this.checkBtn.Normalcolor = System.Drawing.Color.Transparent;
-            this.checkBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
-            this.checkBtn.OnHoverTextColor = System.Drawing.Color.Silver;
-            this.checkBtn.selected = false;
-            this.checkBtn.Size = new System.Drawing.Size(71, 27);
-            this.checkBtn.TabIndex = 4;
-            this.checkBtn.Text = "Check in";
-            this.checkBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBtn.Textcolor = System.Drawing.Color.DarkGray;
-            this.checkBtn.TextFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoAnimator.SetDecoration(this.logo2, BunifuAnimatorNS.DecorationType.None);
+            this.logo2.Image = ((System.Drawing.Image)(resources.GetObject("logo2.Image")));
+            this.logo2.Location = new System.Drawing.Point(458, 3);
+            this.logo2.Name = "logo2";
+            this.logo2.Size = new System.Drawing.Size(357, 74);
+            this.logo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo2.TabIndex = 13;
+            this.logo2.TabStop = false;
             // 
             // regBtn
             // 
-            this.regBtn.Activecolor = System.Drawing.Color.Transparent;
+            this.regBtn.ActiveBorderThickness = 1;
+            this.regBtn.ActiveCornerRadius = 20;
+            this.regBtn.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.regBtn.ActiveForecolor = System.Drawing.Color.Silver;
+            this.regBtn.ActiveLineColor = System.Drawing.Color.Transparent;
             this.regBtn.BackColor = System.Drawing.Color.Transparent;
-            this.regBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.regBtn.BorderRadius = 5;
+            this.regBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("regBtn.BackgroundImage")));
             this.regBtn.ButtonText = "Registration";
             this.regBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoAnimator.SetDecoration(this.regBtn, BunifuAnimatorNS.DecorationType.None);
-            this.regBtn.DisabledColor = System.Drawing.Color.Gray;
-            this.regBtn.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.regBtn.ForeColor = System.Drawing.Color.Gray;
-            this.regBtn.Iconcolor = System.Drawing.Color.Transparent;
-            this.regBtn.Iconimage = null;
-            this.regBtn.Iconimage_right = null;
-            this.regBtn.Iconimage_right_Selected = null;
-            this.regBtn.Iconimage_Selected = null;
-            this.regBtn.IconMarginLeft = 0;
-            this.regBtn.IconMarginRight = 0;
-            this.regBtn.IconRightVisible = true;
-            this.regBtn.IconRightZoom = 0D;
-            this.regBtn.IconVisible = true;
-            this.regBtn.IconZoom = 90D;
-            this.regBtn.IsTab = false;
-            this.regBtn.Location = new System.Drawing.Point(228, 67);
-            this.regBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.regBtn.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regBtn.ForeColor = System.Drawing.Color.DarkGray;
+            this.regBtn.IdleBorderThickness = 1;
+            this.regBtn.IdleCornerRadius = 20;
+            this.regBtn.IdleFillColor = System.Drawing.Color.Transparent;
+            this.regBtn.IdleForecolor = System.Drawing.Color.DarkGray;
+            this.regBtn.IdleLineColor = System.Drawing.Color.Transparent;
+            this.regBtn.Location = new System.Drawing.Point(189, 120);
+            this.regBtn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.regBtn.Name = "regBtn";
-            this.regBtn.Normalcolor = System.Drawing.Color.Transparent;
-            this.regBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
-            this.regBtn.OnHoverTextColor = System.Drawing.Color.Silver;
-            this.regBtn.selected = false;
-            this.regBtn.Size = new System.Drawing.Size(90, 27);
-            this.regBtn.TabIndex = 1;
-            this.regBtn.Text = "Registration";
+            this.regBtn.Size = new System.Drawing.Size(152, 42);
+            this.regBtn.TabIndex = 8;
             this.regBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.regBtn.Textcolor = System.Drawing.Color.DarkGray;
-            this.regBtn.TextFont = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regBtn.Click += new System.EventHandler(this.regBtn_Click);
             // 
             // dispNameLb
             // 
@@ -276,40 +153,64 @@
             this.logoAnimator.SetDecoration(this.dispNameLb, BunifuAnimatorNS.DecorationType.None);
             this.dispNameLb.Font = new System.Drawing.Font("Bauhaus 93", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dispNameLb.ForeColor = System.Drawing.Color.Silver;
-            this.dispNameLb.Location = new System.Drawing.Point(498, 12);
+            this.dispNameLb.Location = new System.Drawing.Point(468, 77);
             this.dispNameLb.Name = "dispNameLb";
             this.dispNameLb.Size = new System.Drawing.Size(347, 39);
             this.dispNameLb.TabIndex = 3;
             this.dispNameLb.Text = "TEMEKE DISPENSARY";
+            // 
+            // line
+            // 
+            this.line.BackColor = System.Drawing.Color.Transparent;
+            this.logoAnimator.SetDecoration(this.line, BunifuAnimatorNS.DecorationType.None);
+            this.line.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.line.LineThickness = 5;
+            this.line.Location = new System.Drawing.Point(189, 162);
+            this.line.Name = "line";
+            this.line.Size = new System.Drawing.Size(148, 5);
+            this.line.TabIndex = 1;
+            this.line.Transparency = 255;
+            this.line.Vertical = false;
+            // 
+            // dummyBtn
+            // 
+            this.dummyBtn.ActiveBorderThickness = 1;
+            this.dummyBtn.ActiveCornerRadius = 20;
+            this.dummyBtn.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.dummyBtn.ActiveForecolor = System.Drawing.Color.Silver;
+            this.dummyBtn.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.dummyBtn.BackColor = System.Drawing.Color.Transparent;
+            this.dummyBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dummyBtn.BackgroundImage")));
+            this.dummyBtn.ButtonText = "Dummy Ticket";
+            this.dummyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoAnimator.SetDecoration(this.dummyBtn, BunifuAnimatorNS.DecorationType.None);
+            this.dummyBtn.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dummyBtn.ForeColor = System.Drawing.Color.DarkGray;
+            this.dummyBtn.IdleBorderThickness = 1;
+            this.dummyBtn.IdleCornerRadius = 20;
+            this.dummyBtn.IdleFillColor = System.Drawing.Color.Transparent;
+            this.dummyBtn.IdleForecolor = System.Drawing.Color.DarkGray;
+            this.dummyBtn.IdleLineColor = System.Drawing.Color.Transparent;
+            this.dummyBtn.Location = new System.Drawing.Point(506, 117);
+            this.dummyBtn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.dummyBtn.Name = "dummyBtn";
+            this.dummyBtn.Size = new System.Drawing.Size(200, 42);
+            this.dummyBtn.TabIndex = 11;
+            this.dummyBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dummyBtn.Click += new System.EventHandler(this.dummyBtn_Click);
             // 
             // logo
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logoAnimator.SetDecoration(this.logo, BunifuAnimatorNS.DecorationType.None);
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(3, 3);
+            this.logo.Location = new System.Drawing.Point(12, 12);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(101, 91);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo.TabIndex = 2;
             this.logo.TabStop = false;
             this.logo.Visible = false;
-            // 
-            // minimizeWindow
-            // 
-            this.minimizeWindow.BackColor = System.Drawing.Color.Transparent;
-            this.minimizeWindow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoAnimator.SetDecoration(this.minimizeWindow, BunifuAnimatorNS.DecorationType.None);
-            this.minimizeWindow.Image = ((System.Drawing.Image)(resources.GetObject("minimizeWindow.Image")));
-            this.minimizeWindow.ImageActive = null;
-            this.minimizeWindow.Location = new System.Drawing.Point(1290, 12);
-            this.minimizeWindow.Name = "minimizeWindow";
-            this.minimizeWindow.Size = new System.Drawing.Size(32, 30);
-            this.minimizeWindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.minimizeWindow.TabIndex = 1;
-            this.minimizeWindow.TabStop = false;
-            this.minimizeWindow.Zoom = 10;
-            this.minimizeWindow.Click += new System.EventHandler(this.minimizeWindow_Click);
             // 
             // closeWindow
             // 
@@ -318,7 +219,7 @@
             this.logoAnimator.SetDecoration(this.closeWindow, BunifuAnimatorNS.DecorationType.None);
             this.closeWindow.Image = ((System.Drawing.Image)(resources.GetObject("closeWindow.Image")));
             this.closeWindow.ImageActive = null;
-            this.closeWindow.Location = new System.Drawing.Point(1318, 12);
+            this.closeWindow.Location = new System.Drawing.Point(1331, 12);
             this.closeWindow.Name = "closeWindow";
             this.closeWindow.Size = new System.Drawing.Size(30, 30);
             this.closeWindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -327,12 +228,48 @@
             this.closeWindow.Zoom = 10;
             this.closeWindow.Click += new System.EventHandler(this.closeWindow_Click);
             // 
-            // bunifuDragControl1
+            // checkBtn
             // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel1;
-            this.bunifuDragControl1.Vertical = true;
+            this.checkBtn.ActiveBorderThickness = 1;
+            this.checkBtn.ActiveCornerRadius = 20;
+            this.checkBtn.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.checkBtn.ActiveForecolor = System.Drawing.Color.Silver;
+            this.checkBtn.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.checkBtn.BackColor = System.Drawing.Color.Transparent;
+            this.checkBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkBtn.BackgroundImage")));
+            this.checkBtn.ButtonText = "Check In";
+            this.checkBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoAnimator.SetDecoration(this.checkBtn, BunifuAnimatorNS.DecorationType.None);
+            this.checkBtn.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBtn.ForeColor = System.Drawing.Color.DarkGray;
+            this.checkBtn.IdleBorderThickness = 1;
+            this.checkBtn.IdleCornerRadius = 20;
+            this.checkBtn.IdleFillColor = System.Drawing.Color.Transparent;
+            this.checkBtn.IdleForecolor = System.Drawing.Color.DarkGray;
+            this.checkBtn.IdleLineColor = System.Drawing.Color.Transparent;
+            this.checkBtn.Location = new System.Drawing.Point(366, 120);
+            this.checkBtn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.checkBtn.Name = "checkBtn";
+            this.checkBtn.Size = new System.Drawing.Size(126, 42);
+            this.checkBtn.TabIndex = 9;
+            this.checkBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBtn.Click += new System.EventHandler(this.checkBtn_Click);
+            // 
+            // minimizeWindow
+            // 
+            this.minimizeWindow.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeWindow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoAnimator.SetDecoration(this.minimizeWindow, BunifuAnimatorNS.DecorationType.None);
+            this.minimizeWindow.Image = ((System.Drawing.Image)(resources.GetObject("minimizeWindow.Image")));
+            this.minimizeWindow.ImageActive = null;
+            this.minimizeWindow.Location = new System.Drawing.Point(1303, 12);
+            this.minimizeWindow.Name = "minimizeWindow";
+            this.minimizeWindow.Size = new System.Drawing.Size(32, 30);
+            this.minimizeWindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.minimizeWindow.TabIndex = 1;
+            this.minimizeWindow.TabStop = false;
+            this.minimizeWindow.Zoom = 10;
+            this.minimizeWindow.Click += new System.EventHandler(this.minimizeWindow_Click);
             // 
             // logoAnimator
             // 
@@ -356,66 +293,172 @@
             this.logoAnimator.DefaultAnimation = animation1;
             this.logoAnimator.TimeStep = 0.05F;
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // line
-            // 
-            this.line.BackColor = System.Drawing.Color.Transparent;
-            this.logoAnimator.SetDecoration(this.line, BunifuAnimatorNS.DecorationType.None);
-            this.line.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(85)))), ((int)(((byte)(127)))));
-            this.line.LineThickness = 5;
-            this.line.Location = new System.Drawing.Point(228, 97);
-            this.line.Name = "line";
-            this.line.Size = new System.Drawing.Size(83, 5);
-            this.line.TabIndex = 1;
-            this.line.Transparency = 255;
-            this.line.Vertical = false;
-            // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.patientNameListGrid);
             this.logoAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 542);
+            this.panel3.Location = new System.Drawing.Point(0, 607);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1370, 230);
+            this.panel3.Size = new System.Drawing.Size(1370, 165);
             this.panel3.TabIndex = 1;
+            // 
+            // patientNameListGrid
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.patientNameListGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.patientNameListGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.patientNameListGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.patientNameListGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.patientNameListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.patientNameListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.patientNameListGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9});
+            this.logoAnimator.SetDecoration(this.patientNameListGrid, BunifuAnimatorNS.DecorationType.None);
+            this.patientNameListGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.patientNameListGrid.DoubleBuffered = true;
+            this.patientNameListGrid.EnableHeadersVisualStyles = false;
+            this.patientNameListGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.patientNameListGrid.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.patientNameListGrid.Location = new System.Drawing.Point(0, 0);
+            this.patientNameListGrid.Name = "patientNameListGrid";
+            this.patientNameListGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.patientNameListGrid.Size = new System.Drawing.Size(1370, 165);
+            this.patientNameListGrid.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Ticket";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "File";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Full Name";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 300;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Total Time";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "From";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Location";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Payment Type";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 150;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "To be att. By";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 150;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Consultation";
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 120;
             // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.logoAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 107);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 169);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1370, 435);
+            this.panel2.Size = new System.Drawing.Size(1370, 438);
             this.panel2.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // logout
+            // 
+            this.logout.ActiveBorderThickness = 1;
+            this.logout.ActiveCornerRadius = 20;
+            this.logout.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.logout.ActiveForecolor = System.Drawing.Color.Silver;
+            this.logout.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
+            this.logout.ButtonText = "LogOut";
+            this.logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoAnimator.SetDecoration(this.logout, BunifuAnimatorNS.DecorationType.None);
+            this.logout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.ForeColor = System.Drawing.Color.DarkGray;
+            this.logout.IdleBorderThickness = 1;
+            this.logout.IdleCornerRadius = 20;
+            this.logout.IdleFillColor = System.Drawing.Color.Transparent;
+            this.logout.IdleForecolor = System.Drawing.Color.DarkGray;
+            this.logout.IdleLineColor = System.Drawing.Color.Transparent;
+            this.logout.Location = new System.Drawing.Point(1285, 49);
+            this.logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(76, 24);
+            this.logout.TabIndex = 15;
+            this.logout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // reception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 772);
+            this.Controls.Add(this.headerPannel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
             this.logoAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "reception";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.reception_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.headerPannel.ResumeLayout(false);
+            this.headerPannel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizeWindow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeWindow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeWindow)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.patientNameListGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -423,22 +466,32 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuImageButton minimizeWindow;
-        private Bunifu.Framework.UI.BunifuImageButton closeWindow;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Label dispNameLb;
-        private Bunifu.Framework.UI.BunifuFlatButton reportBtn;
-        private Bunifu.Framework.UI.BunifuFlatButton viewBtn;
-        private Bunifu.Framework.UI.BunifuFlatButton dummyBtn;
-        private Bunifu.Framework.UI.BunifuFlatButton checkBtn;
-        private Bunifu.Framework.UI.BunifuFlatButton regBtn;
         private BunifuAnimatorNS.BunifuTransition logoAnimator;
         private System.Windows.Forms.Timer timer1;
-        private Bunifu.Framework.UI.BunifuSeparator line;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private Bunifu.Framework.UI.BunifuThinButton2 checkBtn;
+        private Bunifu.Framework.UI.BunifuSeparator line;
+        private Bunifu.Framework.UI.BunifuImageButton minimizeWindow;
+        private Bunifu.Framework.UI.BunifuImageButton closeWindow;
+        private System.Windows.Forms.Label dispNameLb;
+        private Bunifu.Framework.UI.BunifuThinButton2 regBtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 dummyBtn;
+        private System.Windows.Forms.PictureBox logo;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid patientNameListGrid;
+        private System.Windows.Forms.PictureBox logo2;
+        private Bunifu.Framework.UI.BunifuGradientPanel headerPannel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private Bunifu.Framework.UI.BunifuThinButton2 logout;
     }
 }
 

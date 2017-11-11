@@ -16,7 +16,7 @@ namespace Temeke_Dispensary
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new reception());
+            Application.Run(new login());
         }
     }
 }

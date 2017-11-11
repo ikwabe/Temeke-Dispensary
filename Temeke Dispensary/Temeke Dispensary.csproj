@@ -32,10 +32,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\..\Downloads\SWIFT PROJECT FINAL\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -50,6 +55,150 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllDiagnosis.Designer.cs">
+      <DependentUpon>AllDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="allMedTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="allMedTab.Designer.cs">
+      <DependentUpon>allMedTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cashier.Designer.cs">
+      <DependentUpon>cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cashierReportTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cashierReportTab.Designer.cs">
+      <DependentUpon>cashierReportTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chekIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="chekIn.Designer.cs">
+      <DependentUpon>chekIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="diagnosisTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="diagnosisTab.Designer.cs">
+      <DependentUpon>diagnosisTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="docFinishTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="docFinishTab.Designer.cs">
+      <DependentUpon>docFinishTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="docLabTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="docLabTab.Designer.cs">
+      <DependentUpon>docLabTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="docreportTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="docreportTab.Designer.cs">
+      <DependentUpon>docreportTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctCheckInTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="doctCheckInTab.Designer.cs">
+      <DependentUpon>doctCheckInTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctor.Designer.cs">
+      <DependentUpon>doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctVitalTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="doctVitalTab.Designer.cs">
+      <DependentUpon>doctVitalTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dummyTicketTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dummyTicketTab.Designer.cs">
+      <DependentUpon>dummyTicketTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editMedTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="editMedTab.Designer.cs">
+      <DependentUpon>editMedTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laboratory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laboratory.Designer.cs">
+      <DependentUpon>laboratory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="labreportTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="labreportTab.Designer.cs">
+      <DependentUpon>labreportTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="labViewTb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="labViewTb.Designer.cs">
+      <DependentUpon>labViewTb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="measurementTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="measurementTab.Designer.cs">
+      <DependentUpon>measurementTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="medicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="medicine.Designer.cs">
+      <DependentUpon>medicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="patientTreatmentTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="patientTreatmentTab.Designer.cs">
+      <DependentUpon>patientTreatmentTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paymentTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="paymentTab.Designer.cs">
+      <DependentUpon>paymentTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pharmacy.Designer.cs">
+      <DependentUpon>pharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pharmCheckIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pharmCheckIn.Designer.cs">
+      <DependentUpon>pharmCheckIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="reception.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,12 +207,126 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registerMedicineTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="registerMedicineTab.Designer.cs">
+      <DependentUpon>registerMedicineTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="registrationTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="registrationTab.Designer.cs">
       <DependentUpon>registrationTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="reportTab.Designer.cs">
+      <DependentUpon>reportTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffRegistration.Designer.cs">
+      <DependentUpon>staffRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffRegTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="staffRegTab.Designer.cs">
+      <DependentUpon>staffRegTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffUpdtTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="staffUpdtTab.Designer.cs">
+      <DependentUpon>staffUpdtTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sympAssTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sympAssTab.Designer.cs">
+      <DependentUpon>sympAssTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="treatmentTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="treatmentTab.Designer.cs">
+      <DependentUpon>treatmentTab.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllDiagnosis.resx">
+      <DependentUpon>AllDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="allMedTab.resx">
+      <DependentUpon>allMedTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier.resx">
+      <DependentUpon>cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashierReportTab.resx">
+      <DependentUpon>cashierReportTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chekIn.resx">
+      <DependentUpon>chekIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="diagnosisTab.resx">
+      <DependentUpon>diagnosisTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="docFinishTab.resx">
+      <DependentUpon>docFinishTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="docLabTab.resx">
+      <DependentUpon>docLabTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="docreportTab.resx">
+      <DependentUpon>docreportTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctCheckInTab.resx">
+      <DependentUpon>doctCheckInTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctor.resx">
+      <DependentUpon>doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctVitalTab.resx">
+      <DependentUpon>doctVitalTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dummyTicketTab.resx">
+      <DependentUpon>dummyTicketTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editMedTab.resx">
+      <DependentUpon>editMedTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laboratory.resx">
+      <DependentUpon>laboratory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="labreportTab.resx">
+      <DependentUpon>labreportTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="labViewTb.resx">
+      <DependentUpon>labViewTb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="measurementTab.resx">
+      <DependentUpon>measurementTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medicine.resx">
+      <DependentUpon>medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patientTreatmentTab.resx">
+      <DependentUpon>patientTreatmentTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paymentTab.resx">
+      <DependentUpon>paymentTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pharmacy.resx">
+      <DependentUpon>pharmacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pharmCheckIn.resx">
+      <DependentUpon>pharmCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reception.resx">
       <DependentUpon>reception.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,8 +339,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="registerMedicineTab.resx">
+      <DependentUpon>registerMedicineTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="registrationTab.resx">
       <DependentUpon>registrationTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportTab.resx">
+      <DependentUpon>reportTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffRegistration.resx">
+      <DependentUpon>staffRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffRegTab.resx">
+      <DependentUpon>staffRegTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffUpdtTab.resx">
+      <DependentUpon>staffUpdtTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sympAssTab.resx">
+      <DependentUpon>sympAssTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="treatmentTab.resx">
+      <DependentUpon>treatmentTab.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

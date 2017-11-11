@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Temeke_Dispensary
+{
+    public partial class treatmentTab : UserControl
+    {
+        public static treatmentTab _instance;
+        public static treatmentTab Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new treatmentTab();
+                return _instance;
+            }
+        }
+        public treatmentTab()
+        {
+            InitializeComponent();
+        }
+
+        private void treatmentComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(treatmentComboBox.SelectedItem.ToString() == "Drug")
+            {
+                panel2.Visible = true;
+                panel3.Visible = true;
+            }
+            else
+            {
+                panel2.Visible = false;
+                panel3.Visible = false;
+            }
+        }
+
+        private void daycomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (daycomboBox.SelectedItem.ToString() == "Other")
+            {
+                daycomboBox.Visible = false;
+                otherTxtBox.Visible = true;
+            }
+            else
+            {
+
+            }
+        }
+    }
+}

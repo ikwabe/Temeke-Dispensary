@@ -11,28 +11,28 @@ using MySql.Data.MySqlClient;
 
 namespace Temeke_Dispensary
 {
-    public partial class registrationTab : UserControl
+    public partial class measurementTab : UserControl
     {
-        public static registrationTab _instance;
-        public static registrationTab Instance
+        public static measurementTab _instance;
+        public static measurementTab Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new registrationTab();
+                    _instance = new measurementTab();
                 return _instance;
             }
         }
-        public registrationTab()
+        public measurementTab()
         {
             InitializeComponent();
         }
 
-        private void registrationTab_Load(object sender, EventArgs e)
+        private void measurementTab_Load(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
             con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
-            string unit = " select Tribename from tribes_master ";
+            string unit = " select unit from laboratory_units ";
             MySqlCommand com = new MySqlCommand(unit, con);
             DataTable table = new DataTable();
 
@@ -43,8 +43,8 @@ namespace Temeke_Dispensary
                 DataSet ds = new DataSet();
                 da.Fill(ds, "Select");
                 com.ExecuteNonQuery();
-                tribeCombo.DisplayMember = "Tribename";
-                tribeCombo.DataSource = ds.Tables["Select"];
+                unitComb.DisplayMember = "unit";
+                unitComb.DataSource = ds.Tables["Select"];
                 da.Dispose();
             }
             catch (MySqlException ex)
@@ -54,5 +54,4 @@ namespace Temeke_Dispensary
             con.Close();
         }
     }
-    }
-
+}
