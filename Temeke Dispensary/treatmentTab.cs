@@ -62,5 +62,39 @@ namespace Temeke_Dispensary
             drug.Show();
         }
 
+        private void drugCodeTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                MySqlConnection con = new MySqlConnection();
+                con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+                string drug = " select * from drugs_master where drugcode =  '" + drugCodeTxt.Text + "'";
+                MySqlCommand com = new MySqlCommand(drug, con);
+                MySqlDataAdapter ad;
+                try
+                {
+                    con.Open();
+                    ad = new MySqlDataAdapter(com);
+                //taking email to the table for searchimg its corresponding messages in sentmail table
+                DataTable table = new DataTable();
+                ad.Fill(table);
+                    if(table.Rows.Count > 0)
+                    {
+                        drugnameLable.Text = table.Rows[0][1].ToString();
+                        ad.Dispose();
+                    }
+                    else
+                    {
+                        drugnameLable.Text = "No Drug Selected";
+                    }
+               
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                con.Close();
+            }
+        }
     }
 }
