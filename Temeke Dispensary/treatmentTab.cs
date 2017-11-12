@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Temeke_Dispensary
 {
@@ -47,11 +48,19 @@ namespace Temeke_Dispensary
             {
                 daycomboBox.Visible = false;
                 otherTxtBox.Visible = true;
+                otherTxtBox.Location = new Point(daycomboBox.Location.X, daycomboBox.Location.Y);
             }
             else
             {
 
             }
         }
+
+        private void searchDrugBtn_Click(object sender, EventArgs e)
+        {
+            AllDrugs drug = new AllDrugs();
+            drug.Show();
+        }
+
     }
 }
