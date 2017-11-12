@@ -109,7 +109,7 @@ namespace Temeke_Dispensary
                 }
                 con.Close();
 
-
+                //close datagrid
                 this.Close();
             }
             catch
