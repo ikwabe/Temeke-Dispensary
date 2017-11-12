@@ -26,5 +26,11 @@ namespace Temeke_Dispensary
         {
             InitializeComponent();
         }
+
+        private void nameSearchBtn_Click(object sender, EventArgs e)
+        {
+            patientNames patient = new patientNames();
+            patient.Show();
+        }
     }
 }

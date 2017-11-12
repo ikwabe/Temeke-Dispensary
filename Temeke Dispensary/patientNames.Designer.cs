@@ -1,6 +1,6 @@
 ﻿namespace Temeke_Dispensary
 {
-    partial class AllDrugs
+    partial class patientNames
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllDrugs));
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(patientNames));
             this.logoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.logo2 = new System.Windows.Forms.PictureBox();
             this.closeWindow = new Bunifu.Framework.UI.BunifuImageButton();
@@ -53,22 +53,22 @@
             // 
             this.logoAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.logoAnimator.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 20;
-            animation1.Padding = new System.Windows.Forms.Padding(30);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.logoAnimator.DefaultAnimation = animation1;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 20;
+            animation5.Padding = new System.Windows.Forms.Padding(30);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.logoAnimator.DefaultAnimation = animation5;
             this.logoAnimator.TimeStep = 0.05F;
             // 
             // logo2
@@ -119,7 +119,7 @@
             this.headerPannel.Name = "headerPannel";
             this.headerPannel.Quality = 10;
             this.headerPannel.Size = new System.Drawing.Size(668, 140);
-            this.headerPannel.TabIndex = 59;
+            this.headerPannel.TabIndex = 61;
             // 
             // label1
             // 
@@ -152,7 +152,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(668, 772);
-            this.panel1.TabIndex = 60;
+            this.panel1.TabIndex = 62;
             // 
             // diagDataGrid
             // 
@@ -189,7 +189,7 @@
             this.bunifuDragControl1.TargetControl = this.headerPannel;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // AllDrugs
+            // patientNames
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,10 +198,10 @@
             this.Controls.Add(this.panel1);
             this.logoAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AllDrugs";
+            this.Name = "patientNames";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AllDrugs";
-            this.Load += new System.EventHandler(this.AllDrugs_Load);
+            this.Text = "patientNames";
+            this.Load += new System.EventHandler(this.patientNames_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeWindow)).EndInit();
             this.headerPannel.ResumeLayout(false);

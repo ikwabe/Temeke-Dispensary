@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(chekIn));
             this.lable1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -50,9 +50,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.birthdayTxt = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.addressTxt = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -73,19 +73,11 @@
             this.label21 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.vitlable = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.genderTxt = new System.Windows.Forms.TextBox();
+            this.fullNameTxt = new System.Windows.Forms.TextBox();
+            this.nameSearchBtn = new Bunifu.Framework.UI.BunifuImageButton();
+            ((System.ComponentModel.ISupportInitialize)(this.nameSearchBtn)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(151, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 30);
-            this.comboBox1.TabIndex = 7;
             // 
             // lable1
             // 
@@ -105,7 +97,7 @@
             this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(151, 137);
+            this.comboBox2.Location = new System.Drawing.Point(120, 144);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(149, 30);
             this.comboBox2.TabIndex = 17;
@@ -116,7 +108,7 @@
             this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(151, 197);
+            this.comboBox3.Location = new System.Drawing.Point(120, 203);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(149, 30);
             this.comboBox3.TabIndex = 18;
@@ -127,7 +119,7 @@
             this.comboBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(151, 269);
+            this.comboBox4.Location = new System.Drawing.Point(120, 275);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(216, 30);
             this.comboBox4.TabIndex = 19;
@@ -138,7 +130,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(61, 67);
+            this.label2.Location = new System.Drawing.Point(3, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 19);
             this.label2.TabIndex = 18;
@@ -150,7 +142,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(34, 143);
+            this.label1.Location = new System.Drawing.Point(3, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 19);
             this.label1.TabIndex = 31;
@@ -162,11 +154,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(1, 203);
+            this.label3.Location = new System.Drawing.Point(3, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 19);
+            this.label3.Size = new System.Drawing.Size(95, 19);
             this.label3.TabIndex = 32;
-            this.label3.Text = "Consultation Type";
+            this.label3.Text = "Conslt Type";
             // 
             // label4
             // 
@@ -174,7 +166,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(49, 275);
+            this.label4.Location = new System.Drawing.Point(3, 276);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 19);
             this.label4.TabIndex = 33;
@@ -352,14 +344,14 @@
             this.label17.TabIndex = 49;
             this.label17.Text = "Birthday";
             // 
-            // textBox4
+            // birthdayTxt
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(766, 203);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 30);
-            this.textBox4.TabIndex = 48;
+            this.birthdayTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.birthdayTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthdayTxt.Location = new System.Drawing.Point(766, 203);
+            this.birthdayTxt.Name = "birthdayTxt";
+            this.birthdayTxt.Size = new System.Drawing.Size(148, 30);
+            this.birthdayTxt.TabIndex = 48;
             // 
             // label18
             // 
@@ -373,14 +365,14 @@
             this.label18.TabIndex = 51;
             this.label18.Text = "Address";
             // 
-            // textBox5
+            // addressTxt
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(766, 269);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(148, 30);
-            this.textBox5.TabIndex = 50;
+            this.addressTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.addressTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTxt.Location = new System.Drawing.Point(766, 269);
+            this.addressTxt.Name = "addressTxt";
+            this.addressTxt.Size = new System.Drawing.Size(148, 30);
+            this.addressTxt.TabIndex = 50;
             // 
             // textBox6
             // 
@@ -592,14 +584,38 @@
             this.vitlable.TabIndex = 83;
             this.vitlable.Text = "VITALS";
             // 
-            // textBox3
+            // genderTxt
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(766, 138);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 30);
-            this.textBox3.TabIndex = 45;
+            this.genderTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.genderTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderTxt.Location = new System.Drawing.Point(766, 138);
+            this.genderTxt.Name = "genderTxt";
+            this.genderTxt.Size = new System.Drawing.Size(148, 30);
+            this.genderTxt.TabIndex = 45;
+            // 
+            // fullNameTxt
+            // 
+            this.fullNameTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.fullNameTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullNameTxt.Location = new System.Drawing.Point(120, 68);
+            this.fullNameTxt.Name = "fullNameTxt";
+            this.fullNameTxt.Size = new System.Drawing.Size(256, 30);
+            this.fullNameTxt.TabIndex = 84;
+            // 
+            // nameSearchBtn
+            // 
+            this.nameSearchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.nameSearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nameSearchBtn.Image = ((System.Drawing.Image)(resources.GetObject("nameSearchBtn.Image")));
+            this.nameSearchBtn.ImageActive = null;
+            this.nameSearchBtn.Location = new System.Drawing.Point(120, 32);
+            this.nameSearchBtn.Name = "nameSearchBtn";
+            this.nameSearchBtn.Size = new System.Drawing.Size(46, 30);
+            this.nameSearchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.nameSearchBtn.TabIndex = 85;
+            this.nameSearchBtn.TabStop = false;
+            this.nameSearchBtn.Zoom = 10;
+            this.nameSearchBtn.Click += new System.EventHandler(this.nameSearchBtn_Click);
             // 
             // chekIn
             // 
@@ -607,6 +623,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.nameSearchBtn);
+            this.Controls.Add(this.fullNameTxt);
             this.Controls.Add(this.vitlable);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox9);
@@ -628,12 +646,12 @@
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.addressTxt);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.birthdayTxt);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.genderTxt);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.textBox1);
@@ -652,17 +670,15 @@
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.lable1);
-            this.Controls.Add(this.comboBox1);
             this.Name = "chekIn";
             this.Size = new System.Drawing.Size(1370, 434);
+            ((System.ComponentModel.ISupportInitialize)(this.nameSearchBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lable1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -684,9 +700,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox9;
@@ -707,6 +721,10 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label vitlable;
-        private System.Windows.Forms.TextBox textBox3;
+        private Bunifu.Framework.UI.BunifuImageButton nameSearchBtn;
+        public System.Windows.Forms.TextBox fullNameTxt;
+        public System.Windows.Forms.TextBox birthdayTxt;
+        public System.Windows.Forms.TextBox addressTxt;
+        public System.Windows.Forms.TextBox genderTxt;
     }
 }

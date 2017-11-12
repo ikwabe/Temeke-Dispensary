@@ -181,6 +181,12 @@
     <Compile Include="medicine.Designer.cs">
       <DependentUpon>medicine.cs</DependentUpon>
     </Compile>
+    <Compile Include="patientNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patientNames.Designer.cs">
+      <DependentUpon>patientNames.cs</DependentUpon>
+    </Compile>
     <Compile Include="patientTreatmentTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="medicine.resx">
       <DependentUpon>medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patientNames.resx">
+      <DependentUpon>patientNames.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="patientTreatmentTab.resx">
       <DependentUpon>patientTreatmentTab.cs</DependentUpon>
