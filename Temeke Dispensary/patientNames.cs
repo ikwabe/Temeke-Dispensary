@@ -59,28 +59,7 @@ namespace Temeke_Dispensary
             logoAnimator.ShowSync(logo2);
         }
 
-        private void searchTxt_TextChanged(object sender, EventArgs e)
-        {
-            MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
-            string names = " select Fullname from patients where Fullname like '" + searchTxt.Text + "%'";
-            MySqlCommand com = new MySqlCommand(names, con);
-            DataTable table = new DataTable();
-            MySqlDataReader reader;
-            try
-            {
-                con.Open();
-                reader = com.ExecuteReader();
-                table.Load(reader);
-                reader.Close();
-                diagDataGrid.DataSource = table;
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            con.Close();
-        }
+        
         public static string patientName;
         private void diagDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -133,5 +112,30 @@ namespace Temeke_Dispensary
                
 
             }
+
+       
+
+        private void searchNameTxt_TextChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection();
+            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            string names = " select Fullname from patients where Fullname like '" + searchNameTxt.Text + "%'";
+            MySqlCommand com = new MySqlCommand(names, con);
+            DataTable table = new DataTable();
+            MySqlDataReader reader;
+            try
+            {
+                con.Open();
+                reader = com.ExecuteReader();
+                table.Load(reader);
+                reader.Close();
+                diagDataGrid.DataSource = table;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
     }
 }

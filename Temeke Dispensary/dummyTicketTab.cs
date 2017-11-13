@@ -62,5 +62,77 @@ namespace Temeke_Dispensary
             con.Close();
 
         }
+
+        private void searchNameTxt_OnValueChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection();
+            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            string names = " select Fullname from patients where Fullname like '" + searchNameTxt.Text + "%'";
+            MySqlCommand com = new MySqlCommand(names, con);
+            DataTable table = new DataTable();
+            MySqlDataReader reader;
+            try
+            {
+                con.Open();
+                reader = com.ExecuteReader();
+                table.Load(reader);
+                reader.Close();
+                namesDataGrid.DataSource = table;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
+        public static string patientName;
+        private void namesDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+
+            try
+            {
+                DataGridViewRow selectedIndex = namesDataGrid.Rows[index];
+                patientName = selectedIndex.Cells[0].Value.ToString();
+            }
+            catch
+            {
+
+            }
+
+
+            MySqlConnection con = new MySqlConnection();
+            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            string name = " select * from patients where Fullname =  '" + patientName + "'";
+            MySqlCommand com = new MySqlCommand(name, con);
+            MySqlDataAdapter ad;
+            try
+            {
+                con.Open();
+                ad = new MySqlDataAdapter(com);
+                //taking email to the table for searchimg its corresponding messages in sentmail table
+                DataTable table = new DataTable();
+                ad.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    fullNameLable.Text = table.Rows[0][3].ToString();
+                    fileNumberLable.Text = table.Rows[0][1].ToString();
+
+                    ad.Dispose();
+                 
+                }
+                else
+                {
+
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+
+        }
     }
 }

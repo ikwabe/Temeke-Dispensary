@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(patientNames));
             this.logoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.logo2 = new System.Windows.Forms.PictureBox();
             this.closeWindow = new Bunifu.Framework.UI.BunifuImageButton();
             this.headerPannel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.searchTxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.diagDataGrid = new System.Windows.Forms.DataGridView();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.searchNameTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeWindow)).BeginInit();
             this.headerPannel.SuspendLayout();
@@ -53,22 +53,22 @@
             // 
             this.logoAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.logoAnimator.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 20;
-            animation5.Padding = new System.Windows.Forms.Padding(30);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.logoAnimator.DefaultAnimation = animation5;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 20;
+            animation2.Padding = new System.Windows.Forms.Padding(30);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.logoAnimator.DefaultAnimation = animation2;
             this.logoAnimator.TimeStep = 0.05F;
             // 
             // logo2
@@ -105,8 +105,8 @@
             this.headerPannel.BackColor = System.Drawing.Color.Transparent;
             this.headerPannel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("headerPannel.BackgroundImage")));
             this.headerPannel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.headerPannel.Controls.Add(this.searchNameTxt);
             this.headerPannel.Controls.Add(this.label1);
-            this.headerPannel.Controls.Add(this.searchTxt);
             this.headerPannel.Controls.Add(this.logo2);
             this.headerPannel.Controls.Add(this.closeWindow);
             this.logoAnimator.SetDecoration(this.headerPannel, BunifuAnimatorNS.DecorationType.None);
@@ -118,7 +118,7 @@
             this.headerPannel.Location = new System.Drawing.Point(0, 0);
             this.headerPannel.Name = "headerPannel";
             this.headerPannel.Quality = 10;
-            this.headerPannel.Size = new System.Drawing.Size(668, 140);
+            this.headerPannel.Size = new System.Drawing.Size(668, 145);
             this.headerPannel.TabIndex = 61;
             // 
             // label1
@@ -131,17 +131,6 @@
             this.label1.Size = new System.Drawing.Size(77, 23);
             this.label1.TabIndex = 15;
             this.label1.Text = "Search";
-            // 
-            // searchTxt
-            // 
-            this.searchTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logoAnimator.SetDecoration(this.searchTxt, BunifuAnimatorNS.DecorationType.None);
-            this.searchTxt.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxt.Location = new System.Drawing.Point(12, 104);
-            this.searchTxt.Name = "searchTxt";
-            this.searchTxt.Size = new System.Drawing.Size(260, 30);
-            this.searchTxt.TabIndex = 14;
-            this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
             // 
             // panel1
             // 
@@ -165,11 +154,11 @@
             this.diagDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.diagDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.logoAnimator.SetDecoration(this.diagDataGrid, BunifuAnimatorNS.DecorationType.None);
-            this.diagDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.diagDataGrid.Location = new System.Drawing.Point(0, 0);
+            this.diagDataGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.diagDataGrid.Location = new System.Drawing.Point(0, 143);
             this.diagDataGrid.Name = "diagDataGrid";
             this.diagDataGrid.ReadOnly = true;
-            this.diagDataGrid.Size = new System.Drawing.Size(668, 772);
+            this.diagDataGrid.Size = new System.Drawing.Size(668, 629);
             this.diagDataGrid.TabIndex = 0;
             this.diagDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.diagDataGrid_CellContentClick);
             // 
@@ -188,6 +177,17 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.headerPannel;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // searchNameTxt
+            // 
+            this.searchNameTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.logoAnimator.SetDecoration(this.searchNameTxt, BunifuAnimatorNS.DecorationType.None);
+            this.searchNameTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchNameTxt.Location = new System.Drawing.Point(3, 107);
+            this.searchNameTxt.Name = "searchNameTxt";
+            this.searchNameTxt.Size = new System.Drawing.Size(269, 30);
+            this.searchNameTxt.TabIndex = 16;
+            this.searchNameTxt.TextChanged += new System.EventHandler(this.searchNameTxt_TextChanged);
             // 
             // patientNames
             // 
@@ -219,11 +219,11 @@
         private Bunifu.Framework.UI.BunifuImageButton closeWindow;
         private Bunifu.Framework.UI.BunifuGradientPanel headerPannel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox searchTxt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView diagDataGrid;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Timer timer1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.TextBox searchNameTxt;
     }
 }
