@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Temeke_Dispensary
 {
@@ -26,6 +27,40 @@ namespace Temeke_Dispensary
         {
             InitializeComponent();
            
+        }
+
+        private void dummyTicketTab_Load(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection();
+            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            string clinic = " select Clinicname Dummy from clinics_master";
+            MySqlCommand com = new MySqlCommand(clinic, con);
+            MySqlDataAdapter ad;
+            try
+            {
+                con.Open();
+                ad = new MySqlDataAdapter(com);
+                //taking email to the table for searchimg its corresponding messages in sentmail table
+                DataTable table = new DataTable();
+                ad.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                   dummyDataGrid.DataSource = table; 
+                   ad.Dispose();
+                  
+                }
+                else
+                {
+
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+
         }
     }
 }
