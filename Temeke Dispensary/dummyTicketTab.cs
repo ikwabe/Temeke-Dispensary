@@ -32,7 +32,7 @@ namespace Temeke_Dispensary
         private void dummyTicketTab_Load(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string clinic = " select Clinicname Dummy from clinics_master";
             MySqlCommand com = new MySqlCommand(clinic, con);
             MySqlDataAdapter ad;
@@ -66,7 +66,7 @@ namespace Temeke_Dispensary
         private void searchNameTxt_OnValueChanged(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string names = " select Fullname from patients where Fullname like '" + searchNameTxt.Text + "%'";
             MySqlCommand com = new MySqlCommand(names, con);
             DataTable table = new DataTable();
@@ -102,7 +102,7 @@ namespace Temeke_Dispensary
 
 
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string name = " select * from patients where Fullname =  '" + patientName + "'";
             MySqlCommand com = new MySqlCommand(name, con);
             MySqlDataAdapter ad;

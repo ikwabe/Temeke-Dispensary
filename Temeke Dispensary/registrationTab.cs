@@ -31,7 +31,7 @@ namespace Temeke_Dispensary
         private void registrationTab_Load(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string unit = " select Tribename from tribes_master ";
             MySqlCommand com = new MySqlCommand(unit, con);
             DataTable table = new DataTable();

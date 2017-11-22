@@ -62,7 +62,7 @@ namespace Temeke_Dispensary
         private void finishBtn_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string titleId = "select * from users where loginname = '"+ txt.Text +"' and password = '"+ passwd.Text +"'";
             MySqlCommand UT = new MySqlCommand(titleId, con);
             MySqlDataAdapter ad;

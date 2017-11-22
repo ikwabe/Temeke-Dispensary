@@ -67,7 +67,7 @@ namespace Temeke_Dispensary
             if(e.KeyCode == Keys.Enter)
             {
                 MySqlConnection con = new MySqlConnection();
-                con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+                con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
                 string drug = " select * from drugs_master where drugcode =  '" + drugCodeTxt.Text + "'";
                 MySqlCommand com = new MySqlCommand(drug, con);
                 MySqlDataAdapter ad;

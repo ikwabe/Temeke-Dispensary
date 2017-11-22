@@ -21,7 +21,7 @@ namespace Temeke_Dispensary
         private void AllDiagnosis_Load(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string diag = " select diseasename Diagnosis from diseases_master";
             MySqlCommand com = new MySqlCommand(diag, con);
             DataTable table = new DataTable();
@@ -57,7 +57,7 @@ namespace Temeke_Dispensary
         private void searchTxt_TextChanged(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04; database = explora_10 ";
             string diag = " select diseasename Diagnosis from diseases_master where diseasename like '"+ searchTxt.Text +"%' ";
             MySqlCommand com = new MySqlCommand(diag, con);
             DataTable table = new DataTable();

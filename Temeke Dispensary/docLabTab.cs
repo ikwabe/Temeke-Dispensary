@@ -53,7 +53,7 @@ namespace Temeke_Dispensary
         public void checkBx()
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string check1 = " insert into lab_temp(Test) values('" + checkBox1.Text + "') ";
             string check2 = " insert into lab_temp(Test) values('" + checkBox2.Text + "') ";
             string check3 = " insert into lab_temp(Test) values('" + checkBox3.Text + "') ";
@@ -129,7 +129,7 @@ namespace Temeke_Dispensary
         private void lab_tem()
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string test = " insert into lab_temp(Test) values('" + labTestList.Text + "') ";
             string addToGrid = "select * from lab_temp ";
             MySqlDataReader rd;
@@ -169,7 +169,7 @@ namespace Temeke_Dispensary
         {
             labTestList.Text = "----Select---";
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string test = " select name from laboratory_tests_master ";
             string trunc = "truncate lab_temp";
             MySqlCommand com = new MySqlCommand(test, con);
@@ -226,7 +226,7 @@ namespace Temeke_Dispensary
         private void removeBtn_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ; database = explora_10 ";
+            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
             string delete = "delete from lab_temp where Test = '" + selectedWord + "' ";
             MySqlCommand com1 = new MySqlCommand(delete, con);
             MySqlDataReader reader;
