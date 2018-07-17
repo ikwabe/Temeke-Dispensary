@@ -28,20 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.PreviousdiagDataGridview = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.label7 = new System.Windows.Forms.Label();
+            this.address = new System.Windows.Forms.Label();
+            this.fileNumber = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.patientName = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.diagDataGridview = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label12 = new System.Windows.Forms.Label();
+            this.NewdiagDataGridview = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labResultList = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -52,7 +58,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.symptomTxt = new System.Windows.Forms.TextBox();
             this.moreDiagnosBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -64,49 +69,58 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PreviousdiagDataGridview)).BeginInit();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.diagDataGridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewdiagDataGridview)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.labResultList)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.address);
+            this.panel2.Controls.Add(this.fileNumber);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.patientName);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(844, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(521, 444);
             this.panel2.TabIndex = 2;
             // 
-            // panel10
+            // panel5
             // 
-            this.panel10.AutoScroll = true;
-            this.panel10.Controls.Add(this.diagDataGridview);
-            this.panel10.Location = new System.Drawing.Point(9, 195);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(500, 106);
-            this.panel10.TabIndex = 40;
+            this.panel5.AutoScroll = true;
+            this.panel5.Controls.Add(this.PreviousdiagDataGridview);
+            this.panel5.Location = new System.Drawing.Point(15, 312);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(500, 126);
+            this.panel5.TabIndex = 41;
             // 
-            // diagDataGridview
+            // PreviousdiagDataGridview
             // 
-            this.diagDataGridview.AllowUserToAddRows = false;
-            this.diagDataGridview.AllowUserToDeleteRows = false;
+            this.PreviousdiagDataGridview.AllowUserToAddRows = false;
+            this.PreviousdiagDataGridview.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.diagDataGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.diagDataGridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
-            this.diagDataGridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.diagDataGridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.PreviousdiagDataGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.PreviousdiagDataGridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.PreviousdiagDataGridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PreviousdiagDataGridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,50 +128,138 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.diagDataGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.diagDataGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.diagDataGridview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.Column13});
-            this.diagDataGridview.DoubleBuffered = true;
-            this.diagDataGridview.EnableHeadersVisualStyles = false;
-            this.diagDataGridview.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.diagDataGridview.HeaderForeColor = System.Drawing.Color.Silver;
-            this.diagDataGridview.Location = new System.Drawing.Point(3, 27);
-            this.diagDataGridview.Name = "diagDataGridview";
-            this.diagDataGridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.diagDataGridview.Size = new System.Drawing.Size(497, 68);
-            this.diagDataGridview.TabIndex = 27;
+            this.PreviousdiagDataGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.PreviousdiagDataGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PreviousdiagDataGridview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PreviousdiagDataGridview.DoubleBuffered = true;
+            this.PreviousdiagDataGridview.EnableHeadersVisualStyles = false;
+            this.PreviousdiagDataGridview.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.PreviousdiagDataGridview.HeaderForeColor = System.Drawing.Color.Silver;
+            this.PreviousdiagDataGridview.Location = new System.Drawing.Point(0, 0);
+            this.PreviousdiagDataGridview.Name = "PreviousdiagDataGridview";
+            this.PreviousdiagDataGridview.ReadOnly = true;
+            this.PreviousdiagDataGridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.PreviousdiagDataGridview.Size = new System.Drawing.Size(500, 126);
+            this.PreviousdiagDataGridview.TabIndex = 27;
             // 
-            // dataGridViewTextBoxColumn9
+            // label7
             // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.Location = new System.Drawing.Point(193, 280);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(201, 22);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Previous Diagnosis Info";
             // 
-            // dataGridViewTextBoxColumn10
+            // address
             // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Diagnosis with";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 200;
+            this.address.AutoSize = true;
+            this.address.BackColor = System.Drawing.Color.Transparent;
+            this.address.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address.ForeColor = System.Drawing.Color.Honeydew;
+            this.address.Location = new System.Drawing.Point(262, 80);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(0, 22);
+            this.address.TabIndex = 50;
             // 
-            // Column13
+            // fileNumber
             // 
-            this.Column13.HeaderText = "Dr. Comments";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 150;
+            this.fileNumber.AutoSize = true;
+            this.fileNumber.BackColor = System.Drawing.Color.Transparent;
+            this.fileNumber.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileNumber.ForeColor = System.Drawing.Color.Honeydew;
+            this.fileNumber.Location = new System.Drawing.Point(54, 80);
+            this.fileNumber.Name = "fileNumber";
+            this.fileNumber.Size = new System.Drawing.Size(0, 22);
+            this.fileNumber.TabIndex = 49;
             // 
-            // label12
+            // label5
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Silver;
-            this.label12.Location = new System.Drawing.Point(17, 111);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 19);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "T40097";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.Location = new System.Drawing.Point(176, 80);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 22);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Address:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(8, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 22);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "File:";
+            // 
+            // patientName
+            // 
+            this.patientName.AutoSize = true;
+            this.patientName.BackColor = System.Drawing.Color.Transparent;
+            this.patientName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientName.ForeColor = System.Drawing.Color.Honeydew;
+            this.patientName.Location = new System.Drawing.Point(139, 53);
+            this.patientName.Name = "patientName";
+            this.patientName.Size = new System.Drawing.Size(0, 22);
+            this.patientName.TabIndex = 42;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(8, 53);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 22);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Patient Name: ";
+            // 
+            // panel10
+            // 
+            this.panel10.AutoScroll = true;
+            this.panel10.Controls.Add(this.NewdiagDataGridview);
+            this.panel10.Location = new System.Drawing.Point(12, 124);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(500, 150);
+            this.panel10.TabIndex = 40;
+            // 
+            // NewdiagDataGridview
+            // 
+            this.NewdiagDataGridview.AllowUserToAddRows = false;
+            this.NewdiagDataGridview.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.NewdiagDataGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.NewdiagDataGridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.NewdiagDataGridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewdiagDataGridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.NewdiagDataGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.NewdiagDataGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NewdiagDataGridview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NewdiagDataGridview.DoubleBuffered = true;
+            this.NewdiagDataGridview.EnableHeadersVisualStyles = false;
+            this.NewdiagDataGridview.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.NewdiagDataGridview.HeaderForeColor = System.Drawing.Color.Silver;
+            this.NewdiagDataGridview.Location = new System.Drawing.Point(0, 0);
+            this.NewdiagDataGridview.Name = "NewdiagDataGridview";
+            this.NewdiagDataGridview.ReadOnly = true;
+            this.NewdiagDataGridview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.NewdiagDataGridview.Size = new System.Drawing.Size(500, 150);
+            this.NewdiagDataGridview.TabIndex = 27;
             // 
             // label10
             // 
@@ -166,33 +268,9 @@
             this.label10.ForeColor = System.Drawing.Color.Silver;
             this.label10.Location = new System.Drawing.Point(213, 12);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 22);
+            this.label10.Size = new System.Drawing.Size(166, 22);
             this.label10.TabIndex = 38;
-            this.label10.Text = "Diagnosis Info";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(14, 81);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 19);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "File: 01-04-19";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(14, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(418, 19);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "Full Name: Mwanawaziri Ngengemkeni Mwanakazimiri";
+            this.label10.Text = "New Diagnosis Info";
             // 
             // panel1
             // 
@@ -216,19 +294,21 @@
             // 
             // labResultList
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.labResultList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.labResultList.AllowUserToAddRows = false;
+            this.labResultList.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.labResultList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.labResultList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.labResultList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.labResultList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.labResultList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.labResultList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.labResultList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.labResultList.DoubleBuffered = true;
             this.labResultList.EnableHeadersVisualStyles = false;
@@ -236,6 +316,7 @@
             this.labResultList.HeaderForeColor = System.Drawing.Color.Silver;
             this.labResultList.Location = new System.Drawing.Point(3, 27);
             this.labResultList.Name = "labResultList";
+            this.labResultList.ReadOnly = true;
             this.labResultList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.labResultList.Size = new System.Drawing.Size(312, 366);
             this.labResultList.TabIndex = 27;
@@ -256,12 +337,12 @@
             // 
             this.panel4.AutoScroll = true;
             this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.flowLayoutPanel1);
             this.panel4.Controls.Add(this.end);
             this.panel4.Controls.Add(this.postDiagnssBtn);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.symptomTxt);
             this.panel4.Controls.Add(this.moreDiagnosBtn);
-            this.panel4.Controls.Add(this.panel11);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(324, 0);
@@ -315,6 +396,7 @@
             this.postDiagnssBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.postDiagnssBtn.Textcolor = System.Drawing.Color.Lime;
             this.postDiagnssBtn.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postDiagnssBtn.Click += new System.EventHandler(this.postDiagnssBtn_Click);
             // 
             // label3
             // 
@@ -375,143 +457,135 @@
             this.moreDiagnosBtn.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moreDiagnosBtn.Click += new System.EventHandler(this.moreDiagnosBtn_Click);
             // 
-            // panel11
-            // 
-            this.panel11.AutoScroll = true;
-            this.panel11.Controls.Add(this.checkBox9);
-            this.panel11.Controls.Add(this.checkBox10);
-            this.panel11.Controls.Add(this.checkBox5);
-            this.panel11.Controls.Add(this.checkBox6);
-            this.panel11.Controls.Add(this.checkBox7);
-            this.panel11.Controls.Add(this.checkBox8);
-            this.panel11.Controls.Add(this.checkBox3);
-            this.panel11.Controls.Add(this.checkBox4);
-            this.panel11.Controls.Add(this.checkBox2);
-            this.panel11.Controls.Add(this.checkBox1);
-            this.panel11.Location = new System.Drawing.Point(38, 53);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(373, 358);
-            this.panel11.TabIndex = 54;
-            // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
             this.checkBox9.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox9.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox9.Location = new System.Drawing.Point(12, 279);
+            this.checkBox9.Location = new System.Drawing.Point(3, 291);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(100, 26);
             this.checkBox9.TabIndex = 9;
             this.checkBox9.Text = "Diarrhea";
             this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
             this.checkBox10.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox10.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox10.Location = new System.Drawing.Point(12, 311);
+            this.checkBox10.Location = new System.Drawing.Point(3, 259);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(200, 26);
             this.checkBox10.TabIndex = 8;
             this.checkBox10.Text = "III- defined symptom";
             this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox5.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox5.Location = new System.Drawing.Point(12, 151);
+            this.checkBox5.Location = new System.Drawing.Point(3, 227);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(194, 26);
             this.checkBox5.TabIndex = 7;
             this.checkBox5.Text = "Skin infection fungal";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox6.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox6.Location = new System.Drawing.Point(12, 183);
+            this.checkBox6.Location = new System.Drawing.Point(3, 195);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(59, 26);
             this.checkBox6.TabIndex = 6;
             this.checkBox6.Text = "PID";
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
             this.checkBox7.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox7.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox7.Location = new System.Drawing.Point(12, 215);
+            this.checkBox7.Location = new System.Drawing.Point(3, 163);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(91, 26);
             this.checkBox7.TabIndex = 5;
             this.checkBox7.Text = "Anemia";
             this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
             this.checkBox8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox8.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox8.Location = new System.Drawing.Point(12, 247);
+            this.checkBox8.Location = new System.Drawing.Point(3, 131);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(90, 26);
             this.checkBox8.TabIndex = 4;
             this.checkBox8.Text = "Malaria";
             this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox3.Location = new System.Drawing.Point(12, 87);
+            this.checkBox3.Location = new System.Drawing.Point(3, 99);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(140, 26);
             this.checkBox3.TabIndex = 3;
             this.checkBox3.Text = "Hypertension";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox4.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox4.Location = new System.Drawing.Point(12, 119);
+            this.checkBox4.Location = new System.Drawing.Point(3, 67);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(88, 26);
             this.checkBox4.TabIndex = 2;
             this.checkBox4.Text = "Worms";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox2.Location = new System.Drawing.Point(12, 55);
+            this.checkBox2.Location = new System.Drawing.Point(3, 35);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(209, 26);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Urinary tract Infection";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox1.Location = new System.Drawing.Point(12, 23);
+            this.checkBox1.Location = new System.Drawing.Point(3, 3);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(300, 26);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Upper Respiratory Tract infection";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label2
             // 
@@ -523,6 +597,30 @@
             this.label2.Size = new System.Drawing.Size(139, 22);
             this.label2.TabIndex = 39;
             this.label2.Text = "Top 10 Diseases";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.checkBox1);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox2);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox4);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox3);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox8);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox7);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox6);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox5);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox10);
+            this.flowLayoutPanel1.Controls.Add(this.checkBox9);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 53);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(472, 344);
+            this.flowLayoutPanel1.TabIndex = 61;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
             // diagnosisTab
             // 
@@ -537,16 +635,18 @@
             this.Load += new System.EventHandler(this.diagnosisTab_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PreviousdiagDataGridview)).EndInit();
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.diagDataGridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewdiagDataGridview)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.labResultList)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -555,18 +655,14 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel10;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid diagDataGridview;
-        private System.Windows.Forms.Label label12;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid NewdiagDataGridview;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid labResultList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.CheckBox checkBox5;
@@ -581,9 +677,17 @@
         private Bunifu.Framework.UI.BunifuFlatButton postDiagnssBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox symptomTxt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.Label end;
+        private System.Windows.Forms.Label patientName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid PreviousdiagDataGridview;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label address;
+        private System.Windows.Forms.Label fileNumber;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

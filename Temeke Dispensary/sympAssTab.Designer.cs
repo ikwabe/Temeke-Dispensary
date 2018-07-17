@@ -362,8 +362,10 @@
             // 
             // patientHistoryTxt
             // 
-            this.patientHistoryTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.patientHistoryTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.patientHistoryTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.patientHistoryTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientHistoryTxt.ForeColor = System.Drawing.SystemColors.Info;
             this.patientHistoryTxt.Location = new System.Drawing.Point(85, 269);
             this.patientHistoryTxt.Multiline = true;
             this.patientHistoryTxt.Name = "patientHistoryTxt";
@@ -372,8 +374,10 @@
             // 
             // assessmentTxt
             // 
-            this.assessmentTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.assessmentTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.assessmentTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.assessmentTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assessmentTxt.ForeColor = System.Drawing.SystemColors.Info;
             this.assessmentTxt.Location = new System.Drawing.Point(85, 157);
             this.assessmentTxt.Multiline = true;
             this.assessmentTxt.Name = "assessmentTxt";
@@ -382,8 +386,10 @@
             // 
             // symptomTxt
             // 
-            this.symptomTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.symptomTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.symptomTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.symptomTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.symptomTxt.ForeColor = System.Drawing.SystemColors.Info;
             this.symptomTxt.Location = new System.Drawing.Point(85, 45);
             this.symptomTxt.Multiline = true;
             this.symptomTxt.Name = "symptomTxt";

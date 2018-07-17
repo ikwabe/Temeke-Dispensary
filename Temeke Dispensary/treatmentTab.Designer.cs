@@ -51,7 +51,7 @@
             this.daycomboBox = new System.Windows.Forms.ComboBox();
             this.drugnameLable = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DiagnosisCombo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.searchDrugBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -79,9 +79,10 @@
             // 
             // treatmentComboBox
             // 
-            this.treatmentComboBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.treatmentComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.treatmentComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.treatmentComboBox.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treatmentComboBox.ForeColor = System.Drawing.SystemColors.Info;
             this.treatmentComboBox.FormattingEnabled = true;
             this.treatmentComboBox.Items.AddRange(new object[] {
             "Drug",
@@ -125,7 +126,7 @@
             this.panel2.Controls.Add(this.daycomboBox);
             this.panel2.Controls.Add(this.drugnameLable);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.DiagnosisCombo);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.searchDrugBtn);
             this.panel2.Controls.Add(this.label7);
@@ -139,8 +140,9 @@
             // 
             // otherTxtBox
             // 
-            this.otherTxtBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.otherTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.otherTxtBox.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherTxtBox.ForeColor = System.Drawing.SystemColors.Info;
             this.otherTxtBox.Location = new System.Drawing.Point(20, 279);
             this.otherTxtBox.Mask = "00";
             this.otherTxtBox.Name = "otherTxtBox";
@@ -198,7 +200,8 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(109, 498);
             this.textBox1.Multiline = true;
@@ -220,7 +223,8 @@
             // 
             // symptomTxt
             // 
-            this.symptomTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.symptomTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.symptomTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.symptomTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.symptomTxt.Location = new System.Drawing.Point(109, 366);
             this.symptomTxt.Multiline = true;
@@ -290,9 +294,10 @@
             // 
             // comboBox6
             // 
-            this.comboBox6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.comboBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.ForeColor = System.Drawing.SystemColors.Info;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
             "1",
@@ -308,9 +313,10 @@
             // 
             // comboBox4
             // 
-            this.comboBox4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.comboBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.ForeColor = System.Drawing.SystemColors.Info;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "1",
@@ -326,9 +332,10 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.ForeColor = System.Drawing.SystemColors.Info;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "1",
@@ -344,9 +351,10 @@
             // 
             // daycomboBox
             // 
-            this.daycomboBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.daycomboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.daycomboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.daycomboBox.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.daycomboBox.ForeColor = System.Drawing.SystemColors.Info;
             this.daycomboBox.FormattingEnabled = true;
             this.daycomboBox.Items.AddRange(new object[] {
             "1",
@@ -395,20 +403,18 @@
             this.label2.TabIndex = 108;
             this.label2.Text = "Drug Name:";
             // 
-            // comboBox1
+            // DiagnosisCombo
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Drug",
-            "Procedual"});
-            this.comboBox1.Location = new System.Drawing.Point(133, 175);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(299, 30);
-            this.comboBox1.TabIndex = 106;
-            this.comboBox1.Text = "---Select---";
+            this.DiagnosisCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.DiagnosisCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DiagnosisCombo.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiagnosisCombo.ForeColor = System.Drawing.SystemColors.Info;
+            this.DiagnosisCombo.FormattingEnabled = true;
+            this.DiagnosisCombo.Location = new System.Drawing.Point(133, 175);
+            this.DiagnosisCombo.Name = "DiagnosisCombo";
+            this.DiagnosisCombo.Size = new System.Drawing.Size(299, 30);
+            this.DiagnosisCombo.TabIndex = 106;
+            this.DiagnosisCombo.Text = "---Select---";
             // 
             // label1
             // 
@@ -474,13 +480,14 @@
             // 
             // drugCodeTxt
             // 
-            this.drugCodeTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.drugCodeTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.drugCodeTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drugCodeTxt.ForeColor = System.Drawing.SystemColors.Info;
             this.drugCodeTxt.Location = new System.Drawing.Point(133, 25);
             this.drugCodeTxt.Name = "drugCodeTxt";
             this.drugCodeTxt.Size = new System.Drawing.Size(148, 30);
             this.drugCodeTxt.TabIndex = 81;
-            this.drugCodeTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.drugCodeTxt_KeyDown);
+            this.drugCodeTxt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.drugCodeTxt_KeyUp);
             // 
             // bunifuCustomDataGrid3
             // 
@@ -538,6 +545,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "treatmentTab";
             this.Size = new System.Drawing.Size(1365, 444);
+            this.Load += new System.EventHandler(this.treatmentTab_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -565,7 +573,7 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox daycomboBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox DiagnosisCombo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox otherTxtBox;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid3;

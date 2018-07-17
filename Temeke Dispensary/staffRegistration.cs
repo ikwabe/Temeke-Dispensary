@@ -37,6 +37,8 @@ namespace Temeke_Dispensary
 
         private void closeWindow_Click(object sender, EventArgs e)
         {
+            login.logoutSt();
+            login.logoutRecord();
             Application.Exit();
         }
 
@@ -71,9 +73,9 @@ namespace Temeke_Dispensary
 
         private void logout_Click(object sender, EventArgs e)
         {
-            this.Close();
-            login lg = new login();
-            lg.Show();
+            login.logoutSt();
+            login.logoutRecord();
+            Application.Restart();
         }
     }
 }

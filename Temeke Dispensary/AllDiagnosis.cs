@@ -21,7 +21,7 @@ namespace Temeke_Dispensary
         private void AllDiagnosis_Load(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
+            con.ConnectionString = login.DBconnection;
             string diag = " select diseasename Diagnosis from diseases_master";
             MySqlCommand com = new MySqlCommand(diag, con);
             DataTable table = new DataTable();
@@ -57,7 +57,7 @@ namespace Temeke_Dispensary
         private void searchTxt_TextChanged(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ikwabe04; database = explora_10 ";
+            con.ConnectionString = login.DBconnection;
             string diag = " select diseasename Diagnosis from diseases_master where diseasename like '"+ searchTxt.Text +"%' ";
             MySqlCommand com = new MySqlCommand(diag, con);
             DataTable table = new DataTable();
@@ -75,6 +75,55 @@ namespace Temeke_Dispensary
                 MessageBox.Show(ex.Message);
             }
             con.Close();
+        }
+
+        //inserting the clicked diagnosis
+        public static string diagnosis;
+        private void diagDataGrid_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int index = e.RowIndex;
+
+                try
+                {
+                    DataGridViewRow selectedIndex = diagDataGrid.Rows[index];
+                    diagnosis = selectedIndex.Cells[0].Value.ToString();
+
+                    MySqlConnection con = new MySqlConnection();
+                    con.ConnectionString = login.DBconnection;
+
+                    string insert = "insert into diagnosisrecords(date,pID,diagnosis,doctorName,status) values('"
+                        + DateTime.Now.ToString("yyyy-MM-dd") + "','"
+                        + doctCheckInTab.patientId + "','" + diagnosis + "','" + login.uname + "','New')";
+
+                    MySqlDataReader rd;
+                    MySqlCommand com = new MySqlCommand(insert, con);
+                    try
+                    {
+                        con.Open();
+
+                        rd = com.ExecuteReader();
+                        rd.Close();
+
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    con.Close();
+
+                    diagnosisTab.newDia = true;
+
+                    MessageBox.Show("Diagnosis Added");
+                }
+                catch
+                {
+                    MessageBox.Show("Error");
+                }
+
+            }
         }
     }
 }

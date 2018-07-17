@@ -837,16 +837,6 @@
         +wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="headerPannel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADHSURBVChTDcpdh8NAGIDR+Rv5svSilBBCVsMwDKnGhiFk
-        NTpt2tGpri2l7O9/97k4d0cl91mS+4gBOxi0qFFijQ9RSfSSxAkOPSw0GlTYYCUqvS2S3maMGLCDQYsa
-        JdbEECQNHhMcelhoNKiwEZVdo2TXBQeMGNDBYIsaJfHyI9klwOMbDj0sND5RicrPT8nPEQtmjBjQwaBF
-        TTy9JD89EOAxwWEPC41GVOHfUvhfRCw4YMQXOhhsicc/KY4vPBDgMcFhDwst/zLIsMlRltksAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
   <data name="logout.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEwAAAAYCAYAAABQiBvKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

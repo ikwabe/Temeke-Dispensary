@@ -21,7 +21,7 @@ namespace Temeke_Dispensary
         private void AllDrugs_Load(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
+            con.ConnectionString = login.DBconnection;
             string drug = " select drugname Drugs from drugs_master";
             MySqlCommand com = new MySqlCommand(drug, con);
             DataTable table = new DataTable();
@@ -52,7 +52,7 @@ namespace Temeke_Dispensary
         private void searchTxt_TextChanged(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
+            con.ConnectionString = login.DBconnection;
             string drug = " select drugname Drugs from drugs_master where drugname like '" + searchTxt.Text + "%'";
             MySqlCommand com = new MySqlCommand(drug, con);
             DataTable table = new DataTable();
@@ -89,7 +89,7 @@ namespace Temeke_Dispensary
 
 
                 MySqlConnection con = new MySqlConnection();
-                con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
+                con.ConnectionString = login.DBconnection;
                 string drug = " select * from drugs_master where drugname =  '" + drugname + "'";
                 MySqlCommand com = new MySqlCommand(drug, con);
                 MySqlDataAdapter ad;

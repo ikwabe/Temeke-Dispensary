@@ -33,15 +33,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.finalCommentcomboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.transferBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.transferBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label4 = new System.Windows.Forms.Label();
+            this.finalCommentcomboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -85,8 +85,9 @@
             // 
             // symptomTxt
             // 
-            this.symptomTxt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.symptomTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.symptomTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.symptomTxt.ForeColor = System.Drawing.SystemColors.Info;
             this.symptomTxt.Location = new System.Drawing.Point(416, 178);
             this.symptomTxt.Multiline = true;
             this.symptomTxt.Name = "symptomTxt";
@@ -107,9 +108,10 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Normal"});
@@ -137,33 +139,17 @@
             this.panel1.Size = new System.Drawing.Size(1365, 444);
             this.panel1.TabIndex = 128;
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(412, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 19);
-            this.label1.TabIndex = 128;
-            this.label1.Text = "Final Comment";
-            // 
-            // finalCommentcomboBox
-            // 
-            this.finalCommentcomboBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.finalCommentcomboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.finalCommentcomboBox.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.finalCommentcomboBox.FormattingEnabled = true;
-            this.finalCommentcomboBox.Items.AddRange(new object[] {
-            "Transfer",
-            "Bed Rest"});
-            this.finalCommentcomboBox.Location = new System.Drawing.Point(562, 96);
-            this.finalCommentcomboBox.Name = "finalCommentcomboBox";
-            this.finalCommentcomboBox.Size = new System.Drawing.Size(299, 30);
-            this.finalCommentcomboBox.TabIndex = 129;
-            this.finalCommentcomboBox.Text = "----Select-----";
-            this.finalCommentcomboBox.SelectedIndexChanged += new System.EventHandler(this.finalCommentcomboBox_SelectedIndexChanged);
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(412, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 19);
+            this.label4.TabIndex = 131;
+            this.label4.Text = "Doctor Comment";
             // 
             // panel2
             // 
@@ -177,54 +163,6 @@
             this.panel2.Size = new System.Drawing.Size(711, 420);
             this.panel2.TabIndex = 130;
             this.panel2.Visible = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "G Mabuba"});
-            this.comboBox3.Location = new System.Drawing.Point(46, 58);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(299, 30);
-            this.comboBox3.TabIndex = 126;
-            this.comboBox3.Text = "----Select----";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(42, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 19);
-            this.label2.TabIndex = 127;
-            this.label2.Text = "Select Doctor";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(46, 173);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(469, 67);
-            this.textBox1.TabIndex = 128;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(42, 151);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 19);
-            this.label3.TabIndex = 129;
-            this.label3.Text = "Transfer Comment";
             // 
             // transferBtn
             // 
@@ -263,17 +201,84 @@
             this.transferBtn.Textcolor = System.Drawing.Color.Lime;
             this.transferBtn.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(412, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 19);
-            this.label4.TabIndex = 131;
-            this.label4.Text = "Doctor Comment";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.Location = new System.Drawing.Point(42, 151);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 19);
+            this.label3.TabIndex = 129;
+            this.label3.Text = "Transfer Comment";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.textBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.textBox1.Location = new System.Drawing.Point(46, 173);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(469, 67);
+            this.textBox1.TabIndex = 128;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.ForeColor = System.Drawing.SystemColors.Info;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "G Mabuba"});
+            this.comboBox3.Location = new System.Drawing.Point(46, 58);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(299, 30);
+            this.comboBox3.TabIndex = 126;
+            this.comboBox3.Text = "----Select----";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.Location = new System.Drawing.Point(42, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 19);
+            this.label2.TabIndex = 127;
+            this.label2.Text = "Select Doctor";
+            // 
+            // finalCommentcomboBox
+            // 
+            this.finalCommentcomboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.finalCommentcomboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.finalCommentcomboBox.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finalCommentcomboBox.ForeColor = System.Drawing.SystemColors.Info;
+            this.finalCommentcomboBox.FormattingEnabled = true;
+            this.finalCommentcomboBox.Items.AddRange(new object[] {
+            "Transfer",
+            "Bed Rest"});
+            this.finalCommentcomboBox.Location = new System.Drawing.Point(562, 96);
+            this.finalCommentcomboBox.Name = "finalCommentcomboBox";
+            this.finalCommentcomboBox.Size = new System.Drawing.Size(299, 30);
+            this.finalCommentcomboBox.TabIndex = 129;
+            this.finalCommentcomboBox.Text = "----Select-----";
+            this.finalCommentcomboBox.SelectedIndexChanged += new System.EventHandler(this.finalCommentcomboBox_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(412, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 19);
+            this.label1.TabIndex = 128;
+            this.label1.Text = "Final Comment";
             // 
             // docFinishTab
             // 

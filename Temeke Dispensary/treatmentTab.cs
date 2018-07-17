@@ -62,39 +62,64 @@ namespace Temeke_Dispensary
             drug.Show();
         }
 
-        private void drugCodeTxt_KeyDown(object sender, KeyEventArgs e)
+        private void drugCodeTxt_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            MySqlConnection con = new MySqlConnection();
+            con.ConnectionString = login.DBconnection;
+            string drug = " select * from drugs_master where drugcode =  '" + drugCodeTxt.Text + "'";
+            MySqlCommand com = new MySqlCommand(drug, con);
+            MySqlDataAdapter ad;
+            try
             {
-                MySqlConnection con = new MySqlConnection();
-                con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
-                string drug = " select * from drugs_master where drugcode =  '" + drugCodeTxt.Text + "'";
-                MySqlCommand com = new MySqlCommand(drug, con);
-                MySqlDataAdapter ad;
-                try
-                {
-                    con.Open();
-                    ad = new MySqlDataAdapter(com);
+                con.Open();
+                ad = new MySqlDataAdapter(com);
                 //taking email to the table for searchimg its corresponding messages in sentmail table
                 DataTable table = new DataTable();
                 ad.Fill(table);
-                    if(table.Rows.Count > 0)
-                    {
-                        drugnameLable.Text = table.Rows[0][1].ToString();
-                        ad.Dispose();
-                    }
-                    else
-                    {
-                        drugnameLable.Text = "No Drug Selected";
-                    }
-               
-                }
-                catch (MySqlException ex)
+                if (table.Rows.Count > 0)
                 {
-                    MessageBox.Show(ex.Message);
+                    drugnameLable.Text = table.Rows[0][1].ToString();
+                    ad.Dispose();
                 }
-                con.Close();
+                else
+                {
+                    drugnameLable.Text = "No Drug Selected";
+                }
+
             }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
+
+        private void treatmentTab_Load(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection();
+            con.ConnectionString = login.DBconnection;
+           
+            string takeId = "select diagnosis  from diagnosisrecords where pID = '" + doctCheckInTab.patientId + "' and doctorName = '" + login.uname + "' and status = 'Last'";
+
+            MySqlCommand com = new MySqlCommand(takeId, con);
+            DataTable table = new DataTable();
+
+            try
+            {
+                con.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "Select");
+                com.ExecuteNonQuery();
+                DiagnosisCombo.DisplayMember = "diagnosis";
+                DiagnosisCombo.DataSource = ds.Tables["Select"];
+                da.Dispose();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
         }
     }
 }

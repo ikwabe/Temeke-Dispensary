@@ -40,10 +40,14 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\..\Downloads\SWIFT PROJECT FINAL\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\..\..\source\repos\OnlineMongo\AutoRun\AutoRun\bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -237,6 +241,12 @@
     <Compile Include="reportTab.Designer.cs">
       <DependentUpon>reportTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="room.Designer.cs">
+      <DependentUpon>room.cs</DependentUpon>
+    </Compile>
     <Compile Include="staffRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +366,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="registerMedicineTab.resx">
       <DependentUpon>registerMedicineTab.cs</DependentUpon>
@@ -365,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reportTab.resx">
       <DependentUpon>reportTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="room.resx">
+      <DependentUpon>room.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="staffRegistration.resx">
       <DependentUpon>staffRegistration.cs</DependentUpon>
@@ -393,6 +407,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\190699-office.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tone.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tone1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tone2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

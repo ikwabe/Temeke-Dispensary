@@ -64,9 +64,10 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(322, 55);
             this.comboBox1.Name = "comboBox1";
@@ -76,7 +77,7 @@
             // searchBtn
             // 
             this.searchBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
-            this.searchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.searchBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.searchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.searchBtn.BorderRadius = 5;
             this.searchBtn.ButtonText = "Search";
@@ -96,7 +97,7 @@
             this.searchBtn.IsTab = false;
             this.searchBtn.Location = new System.Drawing.Point(882, 47);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Normalcolor = System.Drawing.Color.Transparent;
+            this.searchBtn.Normalcolor = System.Drawing.Color.RoyalBlue;
             this.searchBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
             this.searchBtn.OnHoverTextColor = System.Drawing.Color.Silver;
             this.searchBtn.selected = false;
@@ -109,10 +110,11 @@
             // 
             // bunifuCustomTextbox2
             // 
-            this.bunifuCustomTextbox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bunifuCustomTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.bunifuCustomTextbox2.BorderColor = System.Drawing.Color.Blue;
             this.bunifuCustomTextbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCustomTextbox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomTextbox2.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomTextbox2.Location = new System.Drawing.Point(571, 56);
             this.bunifuCustomTextbox2.Name = "bunifuCustomTextbox2";
             this.bunifuCustomTextbox2.Size = new System.Drawing.Size(263, 30);
@@ -135,7 +137,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.Silver;
             this.label3.Location = new System.Drawing.Point(143, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 19);
@@ -144,10 +146,11 @@
             // 
             // bunifuCustomTextbox1
             // 
-            this.bunifuCustomTextbox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bunifuCustomTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.Blue;
             this.bunifuCustomTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCustomTextbox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomTextbox1.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomTextbox1.Location = new System.Drawing.Point(235, 158);
             this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
             this.bunifuCustomTextbox1.Size = new System.Drawing.Size(188, 30);
@@ -155,10 +158,11 @@
             // 
             // bunifuCustomTextbox3
             // 
-            this.bunifuCustomTextbox3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bunifuCustomTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.bunifuCustomTextbox3.BorderColor = System.Drawing.Color.Blue;
             this.bunifuCustomTextbox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCustomTextbox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomTextbox3.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomTextbox3.Location = new System.Drawing.Point(559, 158);
             this.bunifuCustomTextbox3.Name = "bunifuCustomTextbox3";
             this.bunifuCustomTextbox3.Size = new System.Drawing.Size(188, 30);
@@ -169,7 +173,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.Silver;
             this.label4.Location = new System.Drawing.Point(454, 163);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 19);
@@ -178,10 +182,11 @@
             // 
             // bunifuCustomTextbox4
             // 
-            this.bunifuCustomTextbox4.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bunifuCustomTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.bunifuCustomTextbox4.BorderColor = System.Drawing.Color.Blue;
             this.bunifuCustomTextbox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCustomTextbox4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomTextbox4.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomTextbox4.Location = new System.Drawing.Point(891, 158);
             this.bunifuCustomTextbox4.Name = "bunifuCustomTextbox4";
             this.bunifuCustomTextbox4.Size = new System.Drawing.Size(188, 30);
@@ -192,7 +197,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.Silver;
             this.label5.Location = new System.Drawing.Point(805, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 19);
@@ -204,7 +209,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.Silver;
             this.label6.Location = new System.Drawing.Point(791, 279);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 19);
@@ -213,10 +218,11 @@
             // 
             // bunifuCustomTextbox6
             // 
-            this.bunifuCustomTextbox6.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bunifuCustomTextbox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.bunifuCustomTextbox6.BorderColor = System.Drawing.Color.Blue;
             this.bunifuCustomTextbox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCustomTextbox6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomTextbox6.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomTextbox6.Location = new System.Drawing.Point(559, 274);
             this.bunifuCustomTextbox6.Name = "bunifuCustomTextbox6";
             this.bunifuCustomTextbox6.Size = new System.Drawing.Size(188, 30);
@@ -227,7 +233,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ForeColor = System.Drawing.Color.Silver;
             this.label7.Location = new System.Drawing.Point(480, 279);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 19);
@@ -236,10 +242,11 @@
             // 
             // bunifuCustomTextbox7
             // 
-            this.bunifuCustomTextbox7.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bunifuCustomTextbox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.bunifuCustomTextbox7.BorderColor = System.Drawing.Color.Blue;
             this.bunifuCustomTextbox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCustomTextbox7.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomTextbox7.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomTextbox7.Location = new System.Drawing.Point(235, 274);
             this.bunifuCustomTextbox7.Name = "bunifuCustomTextbox7";
             this.bunifuCustomTextbox7.Size = new System.Drawing.Size(188, 30);
@@ -250,7 +257,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.Silver;
             this.label8.Location = new System.Drawing.Point(143, 279);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 19);
@@ -272,7 +279,7 @@
             // submitBtn
             // 
             this.submitBtn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
-            this.submitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.submitBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.submitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.submitBtn.BorderRadius = 5;
             this.submitBtn.ButtonText = "Submit";
@@ -292,7 +299,7 @@
             this.submitBtn.IsTab = false;
             this.submitBtn.Location = new System.Drawing.Point(1073, 380);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Normalcolor = System.Drawing.Color.Transparent;
+            this.submitBtn.Normalcolor = System.Drawing.Color.RoyalBlue;
             this.submitBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
             this.submitBtn.OnHoverTextColor = System.Drawing.Color.Silver;
             this.submitBtn.selected = false;
@@ -305,10 +312,11 @@
             // 
             // bunifuCustomTextbox5
             // 
-            this.bunifuCustomTextbox5.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bunifuCustomTextbox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.bunifuCustomTextbox5.BorderColor = System.Drawing.Color.Blue;
             this.bunifuCustomTextbox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCustomTextbox5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomTextbox5.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomTextbox5.Location = new System.Drawing.Point(891, 274);
             this.bunifuCustomTextbox5.Name = "bunifuCustomTextbox5";
             this.bunifuCustomTextbox5.Size = new System.Drawing.Size(86, 30);
@@ -316,10 +324,11 @@
             // 
             // bunifuCustomTextbox8
             // 
-            this.bunifuCustomTextbox8.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bunifuCustomTextbox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.bunifuCustomTextbox8.BorderColor = System.Drawing.Color.Blue;
             this.bunifuCustomTextbox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuCustomTextbox8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomTextbox8.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomTextbox8.Location = new System.Drawing.Point(1098, 274);
             this.bunifuCustomTextbox8.Name = "bunifuCustomTextbox8";
             this.bunifuCustomTextbox8.Size = new System.Drawing.Size(86, 30);

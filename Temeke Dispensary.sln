@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temeke Dispensary", "Temeke Dispensary\Temeke Dispensary.csproj", "{A682CEDC-1E61-4C97-BDF2-16E1EF05D91B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{019EBF93-5A31-4549-9A0A-BDDD3A938B4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{A682CEDC-1E61-4C97-BDF2-16E1EF05D91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A682CEDC-1E61-4C97-BDF2-16E1EF05D91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A682CEDC-1E61-4C97-BDF2-16E1EF05D91B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{019EBF93-5A31-4549-9A0A-BDDD3A938B4E}.Debug|Any CPU.ActiveCfg = Debug
+		{019EBF93-5A31-4549-9A0A-BDDD3A938B4E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

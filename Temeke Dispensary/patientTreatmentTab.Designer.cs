@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.abortBtn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.address = new System.Windows.Forms.Label();
+            this.year = new System.Windows.Forms.Label();
+            this.gender = new System.Windows.Forms.Label();
+            this.fileNumber = new System.Windows.Forms.Label();
+            this.scheme = new System.Windows.Forms.Label();
+            this.paymentType = new System.Windows.Forms.Label();
+            this.clinicvisit = new System.Windows.Forms.Label();
+            this.patientName = new System.Windows.Forms.Label();
             this.cancelBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.startBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.requestBtn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -50,12 +60,23 @@
             this.toBillBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.line = new Bunifu.Framework.UI.BunifuSeparator();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.diagbosisTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.abortBtn);
+            this.panel1.Controls.Add(this.address);
+            this.panel1.Controls.Add(this.year);
+            this.panel1.Controls.Add(this.gender);
+            this.panel1.Controls.Add(this.fileNumber);
+            this.panel1.Controls.Add(this.scheme);
+            this.panel1.Controls.Add(this.paymentType);
+            this.panel1.Controls.Add(this.clinicvisit);
+            this.panel1.Controls.Add(this.patientName);
             this.panel1.Controls.Add(this.cancelBtn);
             this.panel1.Controls.Add(this.startBtn);
             this.panel1.Controls.Add(this.requestBtn);
@@ -72,6 +93,129 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1365, 102);
             this.panel1.TabIndex = 0;
+            // 
+            // abortBtn
+            // 
+            this.abortBtn.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.abortBtn.BackColor = System.Drawing.Color.Transparent;
+            this.abortBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.abortBtn.BorderRadius = 5;
+            this.abortBtn.ButtonText = "Abort";
+            this.abortBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.abortBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.abortBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.abortBtn.Iconimage = null;
+            this.abortBtn.Iconimage_right = null;
+            this.abortBtn.Iconimage_right_Selected = null;
+            this.abortBtn.Iconimage_Selected = null;
+            this.abortBtn.IconMarginLeft = 0;
+            this.abortBtn.IconMarginRight = 0;
+            this.abortBtn.IconRightVisible = false;
+            this.abortBtn.IconRightZoom = 0D;
+            this.abortBtn.IconVisible = false;
+            this.abortBtn.IconZoom = 90D;
+            this.abortBtn.IsTab = false;
+            this.abortBtn.Location = new System.Drawing.Point(1081, 6);
+            this.abortBtn.Name = "abortBtn";
+            this.abortBtn.Normalcolor = System.Drawing.Color.Transparent;
+            this.abortBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(84)))), ((int)(((byte)(126)))));
+            this.abortBtn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.abortBtn.selected = false;
+            this.abortBtn.Size = new System.Drawing.Size(101, 30);
+            this.abortBtn.TabIndex = 47;
+            this.abortBtn.Text = "Abort";
+            this.abortBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.abortBtn.Textcolor = System.Drawing.Color.Red;
+            this.abortBtn.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abortBtn.Click += new System.EventHandler(this.abortBtn_Click);
+            // 
+            // address
+            // 
+            this.address.AutoSize = true;
+            this.address.BackColor = System.Drawing.Color.Transparent;
+            this.address.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address.ForeColor = System.Drawing.Color.Honeydew;
+            this.address.Location = new System.Drawing.Point(868, 46);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(0, 19);
+            this.address.TabIndex = 46;
+            // 
+            // year
+            // 
+            this.year.AutoSize = true;
+            this.year.BackColor = System.Drawing.Color.Transparent;
+            this.year.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.year.ForeColor = System.Drawing.Color.Honeydew;
+            this.year.Location = new System.Drawing.Point(852, 17);
+            this.year.Name = "year";
+            this.year.Size = new System.Drawing.Size(0, 19);
+            this.year.TabIndex = 45;
+            // 
+            // gender
+            // 
+            this.gender.AutoSize = true;
+            this.gender.BackColor = System.Drawing.Color.Transparent;
+            this.gender.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gender.ForeColor = System.Drawing.Color.Honeydew;
+            this.gender.Location = new System.Drawing.Point(548, 74);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(0, 19);
+            this.gender.TabIndex = 44;
+            // 
+            // fileNumber
+            // 
+            this.fileNumber.AutoSize = true;
+            this.fileNumber.BackColor = System.Drawing.Color.Transparent;
+            this.fileNumber.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileNumber.ForeColor = System.Drawing.Color.Honeydew;
+            this.fileNumber.Location = new System.Drawing.Point(530, 46);
+            this.fileNumber.Name = "fileNumber";
+            this.fileNumber.Size = new System.Drawing.Size(0, 19);
+            this.fileNumber.TabIndex = 43;
+            // 
+            // scheme
+            // 
+            this.scheme.AutoSize = true;
+            this.scheme.BackColor = System.Drawing.Color.Transparent;
+            this.scheme.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scheme.ForeColor = System.Drawing.Color.Honeydew;
+            this.scheme.Location = new System.Drawing.Point(548, 17);
+            this.scheme.Name = "scheme";
+            this.scheme.Size = new System.Drawing.Size(0, 19);
+            this.scheme.TabIndex = 42;
+            // 
+            // paymentType
+            // 
+            this.paymentType.AutoSize = true;
+            this.paymentType.BackColor = System.Drawing.Color.Transparent;
+            this.paymentType.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentType.ForeColor = System.Drawing.Color.Honeydew;
+            this.paymentType.Location = new System.Drawing.Point(143, 74);
+            this.paymentType.Name = "paymentType";
+            this.paymentType.Size = new System.Drawing.Size(0, 19);
+            this.paymentType.TabIndex = 41;
+            // 
+            // clinicvisit
+            // 
+            this.clinicvisit.AutoSize = true;
+            this.clinicvisit.BackColor = System.Drawing.Color.Transparent;
+            this.clinicvisit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clinicvisit.ForeColor = System.Drawing.Color.Honeydew;
+            this.clinicvisit.Location = new System.Drawing.Point(132, 46);
+            this.clinicvisit.Name = "clinicvisit";
+            this.clinicvisit.Size = new System.Drawing.Size(0, 19);
+            this.clinicvisit.TabIndex = 40;
+            // 
+            // patientName
+            // 
+            this.patientName.AutoSize = true;
+            this.patientName.BackColor = System.Drawing.Color.Transparent;
+            this.patientName.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientName.ForeColor = System.Drawing.Color.Honeydew;
+            this.patientName.Location = new System.Drawing.Point(132, 17);
+            this.patientName.Name = "patientName";
+            this.patientName.Size = new System.Drawing.Size(0, 19);
+            this.patientName.TabIndex = 39;
             // 
             // cancelBtn
             // 
@@ -110,7 +254,7 @@
             // 
             // startBtn
             // 
-            this.startBtn.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.startBtn.Activecolor = System.Drawing.Color.Transparent;
             this.startBtn.BackColor = System.Drawing.Color.Transparent;
             this.startBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.startBtn.BorderRadius = 5;
@@ -176,6 +320,7 @@
             this.requestBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.requestBtn.Textcolor = System.Drawing.Color.Yellow;
             this.requestBtn.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.requestBtn.Click += new System.EventHandler(this.requestBtn_Click);
             // 
             // label8
             // 
@@ -185,9 +330,9 @@
             this.label8.ForeColor = System.Drawing.Color.Silver;
             this.label8.Location = new System.Drawing.Point(790, 46);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(149, 19);
+            this.label8.Size = new System.Drawing.Size(72, 19);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Address: MBAGALA";
+            this.label8.Text = "Address:";
             // 
             // label7
             // 
@@ -197,9 +342,9 @@
             this.label7.ForeColor = System.Drawing.Color.Silver;
             this.label7.Location = new System.Drawing.Point(790, 17);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(223, 19);
+            this.label7.Size = new System.Drawing.Size(67, 19);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Birthday: 13/10/2000 (7 Yrs)";
+            this.label7.Text = "Year(s):";
             // 
             // label6
             // 
@@ -209,9 +354,9 @@
             this.label6.ForeColor = System.Drawing.Color.Silver;
             this.label6.Location = new System.Drawing.Point(484, 74);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 19);
+            this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Gender: M";
+            this.label6.Text = "Gender:";
             // 
             // label5
             // 
@@ -221,9 +366,9 @@
             this.label5.ForeColor = System.Drawing.Color.Silver;
             this.label5.Location = new System.Drawing.Point(484, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 19);
+            this.label5.Size = new System.Drawing.Size(40, 19);
             this.label5.TabIndex = 4;
-            this.label5.Text = "File: 01-04-19";
+            this.label5.Text = "File:";
             // 
             // label4
             // 
@@ -233,9 +378,9 @@
             this.label4.ForeColor = System.Drawing.Color.Silver;
             this.label4.Location = new System.Drawing.Point(484, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(259, 19);
+            this.label4.Size = new System.Drawing.Size(69, 19);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Scheme: NHIF - 307100003878932";
+            this.label4.Text = "Scheme:";
             // 
             // label3
             // 
@@ -245,9 +390,9 @@
             this.label3.ForeColor = System.Drawing.Color.Silver;
             this.label3.Location = new System.Drawing.Point(20, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 19);
+            this.label3.Size = new System.Drawing.Size(117, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Payment Type: Insurance";
+            this.label3.Text = "Payment Type:";
             // 
             // label2
             // 
@@ -257,9 +402,9 @@
             this.label2.ForeColor = System.Drawing.Color.Silver;
             this.label2.Location = new System.Drawing.Point(20, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 19);
+            this.label2.Size = new System.Drawing.Size(92, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Clinic Visit: OPD";
+            this.label2.Text = "Clinic Visit:";
             // 
             // label1
             // 
@@ -269,9 +414,9 @@
             this.label1.ForeColor = System.Drawing.Color.Silver;
             this.label1.Location = new System.Drawing.Point(20, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(443, 19);
+            this.label1.Size = new System.Drawing.Size(117, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Patient Name: Mwanawaziri Ngengemkeni Mwanakazimiri";
+            this.label1.Text = "Patient Name: ";
             // 
             // panel2
             // 
@@ -577,6 +722,16 @@
             this.panel3.Size = new System.Drawing.Size(1365, 444);
             this.panel3.TabIndex = 2;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // diagbosisTimer
+            // 
+            this.diagbosisTimer.Interval = 1;
+            this.diagbosisTimer.Tick += new System.EventHandler(this.diagbosisTimer_Tick);
+            // 
             // patientTreatmentTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,6 +743,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "patientTreatmentTab";
             this.Size = new System.Drawing.Size(1365, 595);
+            this.Load += new System.EventHandler(this.patientTreatmentTab_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -619,5 +775,16 @@
         private Bunifu.Framework.UI.BunifuFlatButton treatmentBtn;
         private Bunifu.Framework.UI.BunifuFlatButton finishBtn;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label address;
+        private System.Windows.Forms.Label year;
+        private System.Windows.Forms.Label gender;
+        private System.Windows.Forms.Label fileNumber;
+        private System.Windows.Forms.Label scheme;
+        private System.Windows.Forms.Label paymentType;
+        private System.Windows.Forms.Label clinicvisit;
+        private System.Windows.Forms.Label patientName;
+        private Bunifu.Framework.UI.BunifuFlatButton abortBtn;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer diagbosisTimer;
     }
 }

@@ -30,11 +30,8 @@
         {
             this.registerBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label14 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Birthdate = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,25 +40,27 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.phoneTxt = new System.Windows.Forms.MaskedTextBox();
+            this.districtCombo = new System.Windows.Forms.ComboBox();
             this.regionListCombobox = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tribeCombo = new System.Windows.Forms.ComboBox();
+            this.religion = new System.Windows.Forms.ComboBox();
+            this.female = new System.Windows.Forms.RadioButton();
+            this.male = new System.Windows.Forms.RadioButton();
+            this.ID = new System.Windows.Forms.MaskedTextBox();
+            this.FirstNameTxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.nationality = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.TitleCombo = new System.Windows.Forms.ComboBox();
             this.prflPhoto = new System.Windows.Forms.PictureBox();
             this.uploadPhotoBtn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.street = new System.Windows.Forms.TextBox();
+            this.deptCombo = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Surnametxt = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.prflPhoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +97,7 @@
             this.registerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.registerBtn.Textcolor = System.Drawing.Color.Lime;
             this.registerBtn.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // label14
             // 
@@ -111,41 +111,18 @@
             this.label14.TabIndex = 77;
             this.label14.Text = "Birthdate";
             // 
-            // dateTimePicker1
+            // Birthdate
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(210, 214);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2017, 10, 11, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(312, 30);
-            this.dateTimePicker1.TabIndex = 76;
-            this.dateTimePicker1.Value = new System.DateTime(2017, 10, 11, 0, 0, 0, 0);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Silver;
-            this.label12.Location = new System.Drawing.Point(614, 454);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 19);
-            this.label12.TabIndex = 74;
-            this.label12.Text = "Cell Phone";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Silver;
-            this.label11.Location = new System.Drawing.Point(602, 395);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 19);
-            this.label11.TabIndex = 73;
-            this.label11.Text = "Work Phone";
+            this.Birthdate.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark;
+            this.Birthdate.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Birthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Birthdate.Location = new System.Drawing.Point(210, 214);
+            this.Birthdate.MaxDate = new System.DateTime(1998, 1, 30, 0, 0, 0, 0);
+            this.Birthdate.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
+            this.Birthdate.Name = "Birthdate";
+            this.Birthdate.Size = new System.Drawing.Size(312, 30);
+            this.Birthdate.TabIndex = 76;
+            this.Birthdate.Value = new System.DateTime(1997, 1, 1, 0, 0, 0, 0);
             // 
             // label10
             // 
@@ -153,23 +130,11 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(598, 339);
+            this.label10.Location = new System.Drawing.Point(598, 280);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 19);
             this.label10.TabIndex = 72;
             this.label10.Text = "Home Phone";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(594, 226);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 19);
-            this.label9.TabIndex = 71;
-            this.label9.Text = "Qualification";
             // 
             // label8
             // 
@@ -251,9 +216,9 @@
             this.label2.ForeColor = System.Drawing.Color.Silver;
             this.label2.Location = new System.Drawing.Point(120, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 19);
+            this.label2.Size = new System.Drawing.Size(89, 19);
             this.label2.TabIndex = 64;
-            this.label2.Text = "Full Name";
+            this.label2.Text = "First Name";
             // 
             // label1
             // 
@@ -267,45 +232,27 @@
             this.label1.TabIndex = 63;
             this.label1.Text = "Staff ID";
             // 
-            // maskedTextBox4
+            // phoneTxt
             // 
-            this.maskedTextBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.maskedTextBox4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(707, 448);
-            this.maskedTextBox4.Mask = "(9999) 000-000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(311, 30);
-            this.maskedTextBox4.TabIndex = 62;
+            this.phoneTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.phoneTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneTxt.ForeColor = System.Drawing.SystemColors.Info;
+            this.phoneTxt.Location = new System.Drawing.Point(707, 274);
+            this.phoneTxt.Name = "phoneTxt";
+            this.phoneTxt.Size = new System.Drawing.Size(311, 30);
+            this.phoneTxt.TabIndex = 60;
+            this.phoneTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneTxt_KeyPress);
             // 
-            // maskedTextBox3
+            // districtCombo
             // 
-            this.maskedTextBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.maskedTextBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(707, 389);
-            this.maskedTextBox3.Mask = "(9999) 000-000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(311, 30);
-            this.maskedTextBox3.TabIndex = 61;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.maskedTextBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(707, 333);
-            this.maskedTextBox2.Mask = "(9999) 000-000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(311, 30);
-            this.maskedTextBox2.TabIndex = 60;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.districtCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.districtCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.districtCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.districtCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.districtCombo.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.districtCombo.ForeColor = System.Drawing.SystemColors.Info;
+            this.districtCombo.FormattingEnabled = true;
+            this.districtCombo.Items.AddRange(new object[] {
             "Bahi",
             "Babayu",
             "Bahi",
@@ -3333,16 +3280,19 @@
             "Ubaruku",
             "Utengule Usangu",
             "Mbeya City"});
-            this.comboBox3.Location = new System.Drawing.Point(707, 113);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(312, 30);
-            this.comboBox3.TabIndex = 57;
+            this.districtCombo.Location = new System.Drawing.Point(707, 113);
+            this.districtCombo.Name = "districtCombo";
+            this.districtCombo.Size = new System.Drawing.Size(312, 30);
+            this.districtCombo.TabIndex = 57;
             // 
             // regionListCombobox
             // 
-            this.regionListCombobox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.regionListCombobox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.regionListCombobox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.regionListCombobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
             this.regionListCombobox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.regionListCombobox.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regionListCombobox.ForeColor = System.Drawing.SystemColors.Info;
             this.regionListCombobox.FormattingEnabled = true;
             this.regionListCombobox.Items.AddRange(new object[] {
             "ARUSHA",
@@ -3380,83 +3330,90 @@
             this.regionListCombobox.Size = new System.Drawing.Size(312, 30);
             this.regionListCombobox.TabIndex = 56;
             // 
-            // comboBox2
+            // tribeCombo
             // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(210, 333);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(312, 30);
-            this.comboBox2.TabIndex = 55;
+            this.tribeCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tribeCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.tribeCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.tribeCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tribeCombo.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tribeCombo.ForeColor = System.Drawing.SystemColors.Info;
+            this.tribeCombo.FormattingEnabled = true;
+            this.tribeCombo.Location = new System.Drawing.Point(210, 333);
+            this.tribeCombo.Name = "tribeCombo";
+            this.tribeCombo.Size = new System.Drawing.Size(312, 30);
+            this.tribeCombo.TabIndex = 55;
+            this.tribeCombo.SelectedIndexChanged += new System.EventHandler(this.tribeCombo_SelectedIndexChanged);
             // 
-            // comboBox1
+            // religion
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(210, 279);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(312, 30);
-            this.comboBox1.TabIndex = 54;
+            this.religion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.religion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.religion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.religion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.religion.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.religion.ForeColor = System.Drawing.SystemColors.Info;
+            this.religion.FormattingEnabled = true;
+            this.religion.Items.AddRange(new object[] {
+            "Adventist",
+            "Lutheran",
+            "RomanCatholics",
+            "Muslim",
+            "Others"});
+            this.religion.Location = new System.Drawing.Point(210, 279);
+            this.religion.Name = "religion";
+            this.religion.Size = new System.Drawing.Size(312, 30);
+            this.religion.TabIndex = 54;
             // 
-            // radioButton2
+            // female
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.Silver;
-            this.radioButton2.Location = new System.Drawing.Point(320, 165);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(90, 26);
-            this.radioButton2.TabIndex = 53;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.female.AutoSize = true;
+            this.female.BackColor = System.Drawing.Color.Transparent;
+            this.female.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.female.ForeColor = System.Drawing.Color.Silver;
+            this.female.Location = new System.Drawing.Point(320, 165);
+            this.female.Name = "female";
+            this.female.Size = new System.Drawing.Size(90, 26);
+            this.female.TabIndex = 53;
+            this.female.TabStop = true;
+            this.female.Text = "Female";
+            this.female.UseVisualStyleBackColor = false;
             // 
-            // radioButton1
+            // male
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.Silver;
-            this.radioButton1.Location = new System.Drawing.Point(210, 165);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 26);
-            this.radioButton1.TabIndex = 52;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.male.AutoSize = true;
+            this.male.BackColor = System.Drawing.Color.Transparent;
+            this.male.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.male.ForeColor = System.Drawing.Color.Silver;
+            this.male.Location = new System.Drawing.Point(210, 165);
+            this.male.Name = "male";
+            this.male.Size = new System.Drawing.Size(70, 26);
+            this.male.TabIndex = 52;
+            this.male.TabStop = true;
+            this.male.Text = "Male";
+            this.male.UseVisualStyleBackColor = false;
             // 
-            // maskedTextBox1
+            // ID
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(210, 61);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.PromptChar = '•';
-            this.maskedTextBox1.Size = new System.Drawing.Size(51, 30);
-            this.maskedTextBox1.TabIndex = 51;
+            this.ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.ID.Enabled = false;
+            this.ID.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID.ForeColor = System.Drawing.SystemColors.Info;
+            this.ID.Location = new System.Drawing.Point(210, 61);
+            this.ID.Name = "ID";
+            this.ID.PromptChar = '•';
+            this.ID.Size = new System.Drawing.Size(51, 30);
+            this.ID.TabIndex = 51;
             // 
-            // textBox2
+            // FirstNameTxt
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(210, 113);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 30);
-            this.textBox2.TabIndex = 49;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(707, 220);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 30);
-            this.textBox1.TabIndex = 78;
+            this.FirstNameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.FirstNameTxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTxt.ForeColor = System.Drawing.SystemColors.Info;
+            this.FirstNameTxt.Location = new System.Drawing.Point(210, 113);
+            this.FirstNameTxt.Name = "FirstNameTxt";
+            this.FirstNameTxt.Size = new System.Drawing.Size(105, 30);
+            this.FirstNameTxt.TabIndex = 49;
             // 
             // label13
             // 
@@ -3464,20 +3421,21 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Silver;
-            this.label13.Location = new System.Drawing.Point(587, 285);
+            this.label13.Location = new System.Drawing.Point(587, 226);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(114, 19);
             this.label13.TabIndex = 79;
             this.label13.Text = "Specialization";
             // 
-            // textBox4
+            // nationality
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(210, 389);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(312, 30);
-            this.textBox4.TabIndex = 82;
+            this.nationality.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.nationality.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nationality.ForeColor = System.Drawing.SystemColors.Info;
+            this.nationality.Location = new System.Drawing.Point(210, 389);
+            this.nationality.Name = "nationality";
+            this.nationality.Size = new System.Drawing.Size(312, 30);
+            this.nationality.TabIndex = 82;
             // 
             // label15
             // 
@@ -3491,16 +3449,20 @@
             this.label15.TabIndex = 81;
             this.label15.Text = "Nationality";
             // 
-            // comboBox5
+            // TitleCombo
             // 
-            this.comboBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.comboBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(707, 279);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(311, 30);
-            this.comboBox5.TabIndex = 83;
+            this.TitleCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.TitleCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.TitleCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.TitleCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TitleCombo.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleCombo.ForeColor = System.Drawing.SystemColors.Info;
+            this.TitleCombo.FormattingEnabled = true;
+            this.TitleCombo.Location = new System.Drawing.Point(707, 220);
+            this.TitleCombo.Name = "TitleCombo";
+            this.TitleCombo.Size = new System.Drawing.Size(311, 30);
+            this.TitleCombo.TabIndex = 83;
+            this.TitleCombo.SelectedIndexChanged += new System.EventHandler(this.TitleCombo_SelectedIndexChanged);
             // 
             // prflPhoto
             // 
@@ -3546,34 +3508,96 @@
             this.uploadPhotoBtn.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadPhotoBtn.Click += new System.EventHandler(this.uploadPhotoBtn_Click);
             // 
-            // textBox3
+            // street
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(707, 170);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(312, 30);
-            this.textBox3.TabIndex = 86;
+            this.street.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.street.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.street.ForeColor = System.Drawing.SystemColors.Info;
+            this.street.Location = new System.Drawing.Point(707, 170);
+            this.street.Name = "street";
+            this.street.Size = new System.Drawing.Size(312, 30);
+            this.street.TabIndex = 86;
+            // 
+            // deptCombo
+            // 
+            this.deptCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.deptCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.deptCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.deptCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deptCombo.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deptCombo.ForeColor = System.Drawing.SystemColors.Info;
+            this.deptCombo.FormattingEnabled = true;
+            this.deptCombo.Location = new System.Drawing.Point(708, 328);
+            this.deptCombo.Name = "deptCombo";
+            this.deptCombo.Size = new System.Drawing.Size(311, 30);
+            this.deptCombo.TabIndex = 88;
+            this.deptCombo.SelectedIndexChanged += new System.EventHandler(this.deptCombo_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.Location = new System.Drawing.Point(588, 334);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 19);
+            this.label9.TabIndex = 87;
+            this.label9.Text = "Departiment";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Silver;
+            this.label12.Location = new System.Drawing.Point(326, 119);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 19);
+            this.label12.TabIndex = 92;
+            this.label12.Text = "Surname";
+            // 
+            // Surnametxt
+            // 
+            this.Surnametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.Surnametxt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Surnametxt.ForeColor = System.Drawing.SystemColors.Info;
+            this.Surnametxt.Location = new System.Drawing.Point(407, 113);
+            this.Surnametxt.Name = "Surnametxt";
+            this.Surnametxt.Size = new System.Drawing.Size(115, 30);
+            this.Surnametxt.TabIndex = 91;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
+            this.maskedTextBox1.Enabled = false;
+            this.maskedTextBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.maskedTextBox1.Location = new System.Drawing.Point(210, 61);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.PromptChar = '•';
+            this.maskedTextBox1.Size = new System.Drawing.Size(51, 30);
+            this.maskedTextBox1.TabIndex = 51;
             // 
             // staffRegTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(101)))));
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.Surnametxt);
+            this.Controls.Add(this.deptCombo);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.street);
             this.Controls.Add(this.uploadPhotoBtn);
             this.Controls.Add(this.prflPhoto);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.TitleCombo);
+            this.Controls.Add(this.nationality);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Birthdate);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -3582,20 +3606,20 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.maskedTextBox4);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.phoneTxt);
+            this.Controls.Add(this.districtCombo);
             this.Controls.Add(this.regionListCombobox);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.tribeCombo);
+            this.Controls.Add(this.religion);
+            this.Controls.Add(this.female);
+            this.Controls.Add(this.male);
             this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ID);
+            this.Controls.Add(this.FirstNameTxt);
             this.Controls.Add(this.registerBtn);
             this.Name = "staffRegTab";
             this.Size = new System.Drawing.Size(1370, 606);
+            this.Load += new System.EventHandler(this.staffRegTab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.prflPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -3605,11 +3629,8 @@
         #endregion
         private Bunifu.Framework.UI.BunifuFlatButton registerBtn;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker Birthdate;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -3618,24 +3639,26 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.MaskedTextBox phoneTxt;
+        private System.Windows.Forms.ComboBox districtCombo;
         private System.Windows.Forms.ComboBox regionListCombobox;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox tribeCombo;
+        private System.Windows.Forms.ComboBox religion;
+        private System.Windows.Forms.RadioButton female;
+        private System.Windows.Forms.RadioButton male;
+        private System.Windows.Forms.MaskedTextBox ID;
+        private System.Windows.Forms.TextBox FirstNameTxt;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox nationality;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox TitleCombo;
         private System.Windows.Forms.PictureBox prflPhoto;
         private Bunifu.Framework.UI.BunifuFlatButton uploadPhotoBtn;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox street;
+        private System.Windows.Forms.ComboBox deptCombo;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox Surnametxt;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

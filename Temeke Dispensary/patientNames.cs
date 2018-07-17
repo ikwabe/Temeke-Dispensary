@@ -26,7 +26,7 @@ namespace Temeke_Dispensary
         private void loadnames()
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
+            con.ConnectionString = login.DBconnection;
             string names = " select Fullname from patients";
             MySqlCommand com = new MySqlCommand(names, con);
             DataTable table = new DataTable();
@@ -77,7 +77,7 @@ namespace Temeke_Dispensary
 
 
                 MySqlConnection con = new MySqlConnection();
-                con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
+            con.ConnectionString = login.DBconnection;
                 string name = " select * from patients where Fullname =  '" + patientName + "'";
                 MySqlCommand com = new MySqlCommand(name, con);
                 MySqlDataAdapter ad;
@@ -90,10 +90,13 @@ namespace Temeke_Dispensary
                     ad.Fill(table);
                 if(table.Rows.Count > 0)
                 {
+                    chekIn.Instance.formNumerTxt.Text = table.Rows[0][1].ToString();
                     chekIn.Instance.fullNameTxt.Text = table.Rows[0][3].ToString();
                     chekIn.Instance.genderTxt.Text = table.Rows[0][4].ToString();
                     chekIn.Instance.birthdayTxt.Text = table.Rows[0][5].ToString();
-                    
+                    chekIn.Instance.yearText.Text = (int.Parse(DateTime.Now.ToShortDateString().Substring(6)) - int.Parse(table.Rows[0][5].ToString().Substring(6))).ToString();
+
+
                     ad.Dispose();
                     this.Close();
                 }
@@ -108,9 +111,6 @@ namespace Temeke_Dispensary
                     MessageBox.Show(ex.Message);
                 }
                 con.Close();
-
-               
-
             }
 
        
@@ -118,7 +118,7 @@ namespace Temeke_Dispensary
         private void searchNameTxt_TextChanged(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "server = localhost; user = root; password = ikwabe04 ; database = explora_10 ";
+            con.ConnectionString = login.DBconnection;
             string names = " select Fullname from patients where Fullname like '" + searchNameTxt.Text + "%'";
             MySqlCommand com = new MySqlCommand(names, con);
             DataTable table = new DataTable();
@@ -137,5 +137,7 @@ namespace Temeke_Dispensary
             }
             con.Close();
         }
+
+       
     }
 }

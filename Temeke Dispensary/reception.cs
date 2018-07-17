@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using MySql.Data.MySqlClient;
+using Bunifu.Framework.UI;
+using System.IO;
 
 namespace Temeke_Dispensary
 {
@@ -20,6 +23,8 @@ namespace Temeke_Dispensary
 
         private void closeWindow_Click(object sender, EventArgs e)
         {
+            login.logoutSt();
+            login.logoutRecord();
             Application.Exit();
         }
 
@@ -28,9 +33,13 @@ namespace Temeke_Dispensary
             this.WindowState = FormWindowState.Minimized;
         }
 
+        
+
         private void reception_Load(object sender, EventArgs e)
         {
+            profile();
             timer1.Start();
+            requestCheckerTimer.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -51,7 +60,7 @@ namespace Temeke_Dispensary
             registrationTab.Instance.BringToFront();
             registrationTab.Instance.Visible = true;
             chekIn.Instance.Visible = false;
-            patientNameListGrid.Visible = false;
+           
             dummyTicketTab.Instance.Visible = false;
 
         }
@@ -65,7 +74,7 @@ namespace Temeke_Dispensary
             panel2.Controls.Add(chekIn.Instance);
             chekIn.Instance.Dock = DockStyle.Fill;
             chekIn.Instance.BringToFront();
-            patientNameListGrid.Visible = true;
+          
             chekIn.Instance.Visible = true;
             dummyTicketTab.Instance.Visible = false;
             registrationTab.Instance.Visible = false;
@@ -81,15 +90,130 @@ namespace Temeke_Dispensary
             dummyTicketTab.Instance.Visible = true;
             chekIn.Instance.Visible = false;
             registrationTab.Instance.Visible = false;
-            patientNameListGrid.Visible = false;
+            
 
         }
 
         private void logout_Click(object sender, EventArgs e)
         {
-            this.Close();
-            login lg = new login();
-            lg.Show();
+            login.logoutSt();
+            login.logoutRecord();
+            Application.Restart();
+        }
+        Label lb;
+        Label lb1;
+        Label lb2;
+        private void Requests()
+        {
+            MySqlConnection con = new MySqlConnection();
+            con.ConnectionString = login.DBconnection;
+
+            string req = "select * from patients_requests where status = 'New'";
+            
+
+            MySqlCommand request = new MySqlCommand(req, con);
+           
+            MySqlDataAdapter da;
+            MySqlDataReader rd;
+            DataTable table = new DataTable();
+            try
+            {
+                con.Open();
+                da = new MySqlDataAdapter(request);
+                da.Fill(table);
+                string lbName;
+                if(table.Rows.Count > 0)
+                {
+                    for (int i = 0; i < table.Rows.Count; i++)
+                    {
+                        //names
+                        lb = new Label();
+                        lb.ForeColor = Color.White;
+                        lb.Font = new Font("Arial Rounded MT", 12,FontStyle.Bold);
+                        lb.AutoSize = true;
+                        lb.Name = table.Rows[i][0].ToString();
+                        lbName = table.Rows[i][0].ToString();
+
+                        //Location
+                  
+                        lb1 = new Label();
+                        lb1.ForeColor = Color.White;
+                        lb1.Font = new Font("Arial Rounded MT", 12, FontStyle.Bold);
+                        lb1.AutoSize = true;
+
+                        //time
+                        lb2 = new Label();
+                        lb2.ForeColor = Color.White;
+                        lb2.Font = new Font("Arial Rounded MT", 12, FontStyle.Bold);
+                        lb2.AutoSize = true;
+
+                        string update = "update patients_requests set status = 'oncall' where recid = '"+lb.Name+"'";
+                        MySqlCommand Update = new MySqlCommand(update, con);
+                        rd = Update.ExecuteReader();
+                        rd.Close();
+
+
+                        lb.Text = table.Rows[i][1].ToString().ToUpper();
+                        lb1.Text = table.Rows[i][3].ToString().ToUpper();
+                        lb2.Text = DateTime.Now.ToLongTimeString();
+
+                        flowLayoutPanel1.Controls.Add(lb);
+                        flowLayoutPanel2.Controls.Add(lb1);
+                        flowLayoutPanel3.Controls.Add(lb2);
+                    }
+
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.tone);
+                    player.Play();
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //a function to load profile information for the user login
+        private void profile()
+        {
+            MySqlDataReader rd;
+            MySqlConnection con = new MySqlConnection();
+            con.ConnectionString = login.DBconnection;
+            string detail = "select photo from users where loginname = '" + login.uname + "'";
+            MySqlCommand com = new MySqlCommand(detail, con);
+            DataTable table = new DataTable();
+            try
+            {
+
+                con.Open();
+                rd = com.ExecuteReader();
+                table.Load(rd);
+                rd.Close();
+
+
+                try
+                {
+                    byte[] img = (byte[])table.Rows[0][0];
+                    MemoryStream ms = new MemoryStream(img);
+                    pictureBox1.Image = Image.FromStream(ms);
+
+                }
+                catch
+                {
+
+                }
+
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
+        private void requestCheckerTimer_Tick(object sender, EventArgs e)
+        {
+            Requests();
         }
     }
 }
