@@ -498,7 +498,7 @@ namespace Temeke_Dispensary
 
                 if(table.Rows.Count > 0)
                 {
-                    initEditBtn.Visible = false;
+                   // initEditBtn.Visible = false;
                     initPaidBtn.Visible = false;
                     paid.Visible = true;
 
@@ -507,7 +507,7 @@ namespace Temeke_Dispensary
                 }
                 else
                 {
-                    initEditBtn.Visible = true;
+                    //initEditBtn.Visible = true;
                     initPaidBtn.Visible = true;
 
                     paid.Visible = false;
@@ -563,7 +563,7 @@ namespace Temeke_Dispensary
 
         private void initPaidBtn_Click(object sender, EventArgs e)
         {
-            initEditBtn.Visible = false;
+           // initEditBtn.Visible = false;
             initPaidBtn.Visible = false;
             paid.Visible = true;
 

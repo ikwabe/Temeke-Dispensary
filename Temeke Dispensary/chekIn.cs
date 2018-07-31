@@ -150,6 +150,26 @@ namespace Temeke_Dispensary
             }
         }
 
+
+        //The function to insert vitals for the patient
+        private void insertVitals()
+        {
+            MySqlConnection con = new MySqlConnection();
+            con.ConnectionString = login.DBconnection;
+
+            string values = "values('" + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") +
+               "','" + tempTxt.Text+
+                "','"+pulseTxt.Text +
+                "','"+ResporationTxt.Text+
+                "','"+oxygenTxt.Text+
+                "','"+BPSystolicTxt.Text+
+                "','"+BPDiastolicTxt.Text+
+                "','"+HeightTxt.Text+
+                "','"+WeightTxt.Text+
+                "','"+BMITxt.Text+"')";
+            string insert = "insert into vitalrecords(patientID,vitaldate,temperature,pulse,respiration,oxygen,bpsystolic,bpdiastolic,height,weight,bmi,status) " + 
+                values;
+        }
         // a petient has insurance
         private void sendThePatientToDoctor()
         {

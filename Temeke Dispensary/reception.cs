@@ -162,7 +162,7 @@ namespace Temeke_Dispensary
                         flowLayoutPanel3.Controls.Add(lb2);
                     }
 
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.tone);
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.tone3);
                     player.Play();
                 }
 
